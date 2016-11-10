@@ -234,7 +234,7 @@ The following API enables you to make a single call or bulk outbound calls to re
 |-----------------------|------------|----------
 | authToken             | credentials| Required: Valid authToken.
 | authId                | credentials| Required: Valid authId.
-| callFrom              | String     | Required: 
+| callFrom              | String     | Required: The phone number to be used as the caller id (with the country code).For e.g, a USA caller id number could be, 15677654321, with '1' for the country code.
 | callTo                | String     | Required: The regular number(s) or sip endpoint(s) to call. Regular number must be prefixed with country code but without the + sign). For e.g, to dial a number in the USA, the number could be, 15677654321, with '1' for the country code. Multiple numbers can be sent by using a delimiter. For e.g. 15677654321<12077657621<12047657621. Sip endpoints must be prefixed with sip: E.g., sip:john1234@phone.plivo.com. To make bulk calls, the delimiter < is used. For example, 15677654321<15673464321<sip:john1234@phone.plivo.com Yes, you can mix regular numbers and sip endpoints.
 | answerUrl             | String     | Required: The URL invoked by Plivo when the outbound call is answered.
 | answerMethod          | String     | The method used to call the answer_url. Defaults to POST.
@@ -679,7 +679,7 @@ This API enables you to send messages via Plivo’s SMS service. The API support
 | authToken| credentials| Required: Valid authToken.
 | authId   | credentials| Required: Valid authId.
 | src      | String     | Required: The phone number that will be shown as the sender ID. Be sure that all phone numbers include country code, area code, and phone number without spaces or dashes (e.g., 14153336666). Note that a Plivo phone number is required for sending messages to the U.S. or Canada. You can buya Plivo number from the Buy Numbers tab on your Plivo account dashboard.
-| dst      | String     | The number to which the message will be sent. Be sure that all phone numbers include country code, area code, and phone number withoutspaces or dashes (e.g., 14153336666). To send messages to multiple numbers, separate your destination phone numbers with the delimiter '<' (e.g., 14156667777<14157778888<14158889999).
+| destination| String     | The number to which the message will be sent. Be sure that all phone numbers include country code, area code, and phone number withoutspaces or dashes (e.g., 14153336666). To send messages to multiple numbers, separate your destination phone numbers with the delimiter '<' (e.g., 14156667777<14157778888<14158889999).
 | text     | String     | Required: The text message that will be sent. The API will encode the text in Unicode UTF-8 and accepts up to 1000 bytes of UTF-8 encoded text in a single API request. The text will be automatically split into multiple messages and sent separately if the message exceeds the size limit. See notes below for more details.
 | type     | String     | The type of message. Should be `sms` for a text message. Defaults to `sms`.
 | url      | String     | The URL to which with the status of the message is sent. 

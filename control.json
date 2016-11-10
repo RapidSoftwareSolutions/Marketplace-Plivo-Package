@@ -500,7 +500,7 @@
         "args": {
             "authId": "$!auth_id",
             "src": "$src",
-            "dst": "dst",
+            "destination": "dst",
             "text": "$text",
             "type": "type",
             "url": "url",
