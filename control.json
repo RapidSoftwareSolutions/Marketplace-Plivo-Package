@@ -1,0 +1,692 @@
+{
+    "getAccountDetails": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id"
+        }
+    },
+    "updateAccount": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "name": "name",
+            "city": "city",
+            "address": "address"
+        }
+    },
+    "createSubaccount": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Subaccount/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "name": "$name",
+            "enabled": "enabled"
+        }
+    },
+    "updateSubaccount": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Subaccount/{subauth_id}/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "subauthId": "$!subauth_id",
+            "name": "$name",
+            "enabled": "enabled"
+        }
+    },
+    "getSingleSubaccount": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Subaccount/{subauth_id}/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "subauthId": "$!subauth_id"
+        }
+    },
+    "getSubaccounts": {
+        "url": " https://api.plivo.com/v1/Account/{auth_id}/Subaccount/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "offset": "offset",
+            "limit": "limit"
+        }
+    },
+    "deleteSubaccount": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Subaccount/{subauth_id}/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id",
+            "subauthId": "$!subauth_id"
+        }
+    },
+    "createApplication": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Application/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "answerUrl": "$answer_url",
+            "appName": "$app_name",
+            "answerMethod": "answer_method",
+            "hangupUrl": "hangup_url",
+            "hangupMethod": "hangup_method",
+            "fallbackAnswerUrl": "fallback_answer_url",
+            "fallbackMethod": "fallback_method",
+            "messageUrl": "message_url",
+            "messageMethod": "message_method",
+            "defaultNumberApp": "default_number_app",
+            "defaultEndpointApp": "default_endpoint_app",
+            "subaccount": "subaccount"
+        }
+    },
+    "getApplications": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Application/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "subaccount": "subaccount",
+            "limit": "limit",
+            "offset": "offset"
+        }
+    },
+    "getSingleApplication": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Application/{app_id}/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "appId": "$!app_id"
+        }
+    },
+    "updateApplication": {
+        "url": " https://api.plivo.com/v1/Account/{auth_id}/Application/{app_id}/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "appId": "$!app_id",
+            "answerUrl": "answer_url",
+            "answerMethod": "answer_method",
+            "hangupUrl": "hangup_url",
+            "hangupMethod": "hangup_method",
+            "fallbackAnswerUrl": "fallback_answer_url",
+            "fallbackMethod": "fallback_method",
+            "messageUrl": "message_url",
+            "messageMethod": "message_method",
+            "defaultNumberApp": "default_number_app",
+            "defaultEndpointApp": "default_endpoint_app",
+            "subaccount": "subaccount"
+        }
+    },
+    "deleteApplication": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Application/{app_id}/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id",
+            "appId": "$!app_id"
+        }
+    },
+    "makeCall": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Call/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "callFrom": "$from",
+            "callTo": "$to",
+            "answerUrl": "$answer_url",
+            "answerMethod ": "answer_method ",
+            "ringUrl": "ring_url",
+            "ringMethod": "ring_method",
+            "hangupUrl": "hangup_url",
+            "hangupMethod": "hangup_method",
+            "fallbackUrl": "fallback_url",
+            "fallbackMethod": "fallback_method",
+            "callerName": "caller_name",
+            "sendDigits": "send_digits",
+            "sendOnPreanswer": "send_on_preanswer",
+            "timeLimit": "time_limit",
+            "hangupOnRing": "hangup_on_ring",
+            "machineDetection": "machine_detection",
+            "machineDetectionTime": "machine_detection_time",
+            "machineDetectionUrl": "machine_detection_url",
+            "machineDetectionMethod": "machine_detection_method",
+            "sipHeaders": "sip_headers",
+            "ringTimeout": "ring_timeout",
+            "parentCallUuid": "parent_call_uuid",
+            "errorIfParentNotFound ": "error_if_parent_not_found "
+        }
+    },
+    "getCallsDetails": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Call/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "callDirection": "call_direction",
+            "fromNumber": "from_number",
+            "toNumber": "to_number",
+            "billDuration": "bill_duration",
+            "endTime": "end_time",
+            "limit": "limit",
+            "offset": "offset"
+        }
+    },
+    "getSingleCallDetails": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Call/{call_uuid}/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "callUuid": "$!call_uuid"
+        }
+    },
+    "getLiveCalls": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Call/?status=live",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id"
+        }
+    },
+    "getSingleLiveCallDetails": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Call/{call_uuid}/?status=live",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "callUuid": "$!call_uuid"
+        }
+    },
+    "hangupSingleCall": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Call/{call_uuid}/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id",
+            "callUuid": "$!call_uuid"
+        }
+    },
+    "hangupCalls": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Call/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id"
+        }
+    },
+    "transferCall": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Call/{call_uuid}/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "callUuid": "$!call_uuid",
+            "legs": "legs",
+            "alegUrl": "aleg_url",
+            "alegMethod": "aleg_method",
+            "blegUrl": "bleg_url",
+            "blegMethod": "bleg_method"
+        }
+    },
+    "recordCall": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Call/{call_uuid}/Record/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "callUuid": "$!call_uuid",
+            "timeLimit": "time_limit",
+            "fileFormat": "file_format",
+            "transcriptionType": "transcription_type",
+            "transcriptionUrl": "transcription_url",
+            "transcriptionMethod": "transcription_method",
+            "callbackUrl": "callback_url",
+            "callbackMethod": "callback_method"
+        }
+    },
+    "stopCallRecording": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Call/{call_uuid}/Record/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id",
+            "callUuid": "$!call_uuid"
+        }
+    },
+    "playMusicFile": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Call/{call_uuid}/Play/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "callUuid": "$!call_uuid",
+            "urls": "urls",
+            "length": "length",
+            "legs": "legs",
+            "loop": "loop",
+            "mix": "mix"
+        }
+    },
+    "stopPlayingMusicFile": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Call/{call_uuid}/Play/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id",
+            "callUuid": "$!call_uuid"
+        }
+    },
+    "playText": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Call/{call_uuid}/Speak/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id",
+            "callUuid": "$!call_uuid",
+            "text": "$text",
+            "voice": "voice",
+            "language": "language",
+            "legs": "legs",
+            "loop": "loop",
+            "mix": "mix"
+        }
+    },
+    "stopPlayingText": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Call/{call_uuid}/Speak/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "callUuid": "$!call_uuid"
+        }
+    },
+    "sendDigits": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Call/{call_uuid}/DTMF/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "callUuid": "$!call_uuid",
+            "digits": "$digits",
+            "leg": "leg"
+        }
+    },
+    "hangupCallRequest": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Request/{request_uuid}/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id",
+            "requestUuid": "$!request_uuid"
+        }
+    },
+    "getConferences": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Conference/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id"
+        }
+    },
+    "getSingleConference": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Conference/{conference_name}/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "conferenceName": "$!conference_name"
+        }
+    },
+    "hangupConferences": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Conference/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id"
+        }
+    },
+    "hangupSingleConference": {
+        "url": "shttps://api.plivo.com/v1/Account/{auth_id}/Conference/{conference_name}/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id",
+            "conferenceName": "$!conference_name"
+        }
+    },
+    "startRecordingConference": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Conference/{conference_name}/Record/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "conferenceName": "$!conference_name",
+            "fileFormat": "file_format",
+            "transcriptionType": "transcription_type",
+            "transcriptionUrl": "transcription_url",
+            "transcriptionMethod": "transcription_method",
+            "callbackUrl": "callback_url",
+            "callbackMethod": "callback_method"
+        }
+    },
+    "stopRecordingConference": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Conference/{conference_name}/Record/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id",
+            "conferenceName": "$!conference_name"
+        }
+    },
+    "hangupMember": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Conference/{conference_name}/Member/{member_id}/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id",
+            "conferenceName": "$!conference_name",
+            "memberId": "$member_id"
+        }
+    },
+    "kickMember": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Conference/{conference_name}/Member/{member_id}/Kick/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "conferenceName": "$!conference_name",
+            "memberId": "$member_id"
+        }
+    },
+    "muteMember": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Conference/{conference_name}/Member/{member_id}/Mute/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "conferenceName": "$!conference_name",
+            "memberId": "$member_id"
+        }
+    },
+    "unmuteMember": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Conference/{conference_name}/Member/{member_id}/Mute/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id",
+            "conferenceName": "$!conference_name",
+            "memberId": "$member_id"
+        }
+    },
+    "playSoundToMember": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Conference/{conference_name}/Member/{member_id}/Play/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "conferenceName": "$!conference_name",
+            "memberId": "$member_id",
+            "url": "$url"
+        }
+    },
+    "stopPlayingSoundToMember": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Conference/{conference_name}/Member/{member_id}/Play/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id",
+            "conferenceName": "$!conference_name",
+            "memberId": "$member_id"
+        }
+    },
+    "playTextToMember": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Conference/{conference_name}/Member/{member_id}/Speak/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "conferenceName": "$!conference_name",
+            "memberId": "$member_id",
+            "text": "$text",
+            "voice": "voice",
+            "language": "language"
+        }
+    },
+    "stopPlayingTextToMember": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Conference/{conference_name}/Member/{member_id}/Speak/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id",
+            "conferenceName": "$!conference_name",
+            "memberId": "$member_id"
+        }
+    },
+    "makeMemberDeaf": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Conference/{conference_name}/Member/{member_id}/Deaf/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "conferenceName": "$!conference_name",
+            "memberId": "$member_id"
+        }
+    },
+    "enableHearingForMember": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Conference/{conference_name}/Member/{member_id}/Deaf/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id",
+            "conferenceName": "$!conference_name",
+            "memberId": "$member_id"
+        }
+    },
+    "createEndpoint": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Endpoint/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "username": "$username",
+            "password": "$password",
+            "alias": "$alias",
+            "appId": "app_id"
+        }
+    },
+    "getSingleEndpoint": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Endpoint/{endpoint_id}/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "endpointId": "$endpoint_id"
+        }
+    },
+    "getEndpoints": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Endpoint/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id"
+        }
+    },
+    "updateEndpoint": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Endpoint/{endpoint_id}/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "endpointId": "$endpoint_id",
+            "password": "$password",
+            "alias": "$alias",
+            "appId": "app_id"
+        }
+    },
+    "deleteEndpoint": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Endpoint/{endpoint_id}/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id",
+            "endpointId": "$endpoint_id"
+        }
+    },
+    "sendMessage": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Message/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "src": "$src",
+            "dst": "dst",
+            "text": "$text",
+            "type": "type",
+            "url": "url",
+            "method": "method",
+            "log": "log"
+        }
+    },
+    "getMessages": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Message/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "subaccount": "subaccount",
+            "messageDirection": "message_direction",
+            "messageTime": "message_time",
+            "limit": "limit",
+            "offset": "offset",
+            "errorCode": "error_code"
+        }
+    },
+    "getSingleMessage": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Message/{message_uuid}/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "messageUuid": "$message_uuid"
+        }
+    },
+    "getRentedNumbers": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Number/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "type": "type",
+            "numberStartsWith": "number_starts_with",
+            "subaccount": "subaccount",
+            "alias": "alias",
+            "services": "services",
+            "limit": "limit",
+            "offset": "offset"
+        }
+    },
+    "getRentedNumber": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Number/{number}/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "number": "$!number"
+        }
+    },
+    "addOwnCarrierNumber": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Number/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "numbers": "$numbers",
+            "carrier": "$carrier",
+            "region": "$region",
+            "numberType": "number_type",
+            "appId": "app_id",
+            "subaccount": "subaccount"
+        }
+    },
+    "updateNumber": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Number/{number}/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "number": "$!number",
+            "appId": "app_id",
+            "subaccount": "subaccount",
+            "alias": "alias"
+        }
+    },
+    "unrentNumber": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Number/{number}/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "number": "$!number"
+        }
+    },
+    "searchNewNumbers": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/PhoneNumber/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "countryIso": "$country_iso",
+            "type": "type",
+            "pattern": "pattern",
+            "region": "region",
+            "services": "services",
+            "lata": "lata",
+            "rateCenter": "rate_center",
+            "limit": "limit",
+            "offset": "offset"
+        }
+    },
+    "buyNumber": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/PhoneNumber/{number}/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "number": "$!number",
+            "appId": "app_id"
+        }
+    },
+    "getPricing": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Pricing/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "countryIso": "$country_iso"
+        }
+    },
+    "getRecordings": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Recording/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "addTime": "add_time",
+            "subaccount": "subaccount",
+            "callUuid": "call_uuid",
+            "limit": "limit",
+            "offset": "offset"
+        }
+    },
+    "getSingleRecording": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Recording/{recording_id}/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "recordingId": "$!recording_id"
+        }
+    },
+    "deleteRecording": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/Recording/{recording_id}/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id",
+            "recordingId": "$!recording_id"
+        }
+    },
+    "listIncomingCarriers": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/IncomingCarrier/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "name": "name",
+            "limit": "limit",
+            "offset": "offset"
+        }
+    },
+    "getSingleIncomingCarrier": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/IncomingCarrier/{carrier_id}/",
+        "method": "GET",
+        "args": {
+            "authId": "$!auth_id",
+            "carrierId": "$!carrier_id"
+        }
+    },
+    "addIncomingCarrier": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/IncomingCarrier/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "name": "$name",
+            "ipSet": "$ip_set"
+        }
+    },
+    "updateIncomingCarrier": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/IncomingCarrier/{carrier_id}/",
+        "method": "POST",
+        "args": {
+            "authId": "$!auth_id",
+            "carrierId": "$!carrier_id",
+            "name": "name",
+            "ipSet": "ip_set"
+        }
+    },
+    "removeIncomingCarrier": {
+        "url": "https://api.plivo.com/v1/Account/{auth_id}/IncomingCarrier/{carrier_id}/",
+        "method": "DELETE",
+        "args": {
+            "authId": "$!auth_id",
+            "carrierId": "$!carrier_id"      
+        }
+    }
+}

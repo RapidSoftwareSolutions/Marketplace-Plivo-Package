@@ -1,0 +1,1557 @@
+{
+  "getCategories": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/categories",
+    "args": [
+      "fields"
+    ],
+    "cargs": [
+      "fields"
+    ]
+  },
+  "getDashboard": {
+    "method": "GET",
+    "res": "https://api.meetup.com/dashboard",
+    "args": [
+      "fields"
+    ],
+    "cargs": [
+      "fields"
+    ]
+  },
+  "getTopicCategories": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/topic_categories",
+    "args": [
+      "fields",
+      "radius",
+      "lon",
+      "lat"
+    ],
+    "cargs": [
+      "fields",
+      "radius",
+      "longitude",
+      "latitude"
+    ]
+  },
+  "getTopics": {
+    "method": "GET",
+    "res": "https://api.meetup.com/topics",
+    "args": [
+      "member_id",
+      "name",
+      "topic",
+      "search"
+    ],
+    "cargs": [
+      "memberId",
+      "name",
+      "topic",
+      "search"
+    ]
+  },
+  "getOpenEvents": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/open_events",
+    "args": [
+      "and_text",
+      "lat",
+      "zip",
+      "country",
+      "topic",
+      "city",
+      "limited_events",
+      "text_format",
+      "state",
+      "text",
+      "category",
+      "lon",
+      "time",
+      "radius",
+      "fields",
+      "status"
+    ],
+    "cargs": [
+      "andText",
+      "latitude",
+      "zip",
+      "country",
+      "topic",
+      "city",
+      "limitedEvents",
+      "textFormat",
+      "state",
+      "text",
+      "category",
+      "longitude",
+      "time",
+      "radius",
+      "fields",
+      "status"
+    ]
+  },
+  "getConcierge": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/concierge",
+    "args": [
+      "zip",
+      "country",
+      "city",
+      "lon",
+      "text_format",
+      "category_id",
+      "page_token",
+      "state",
+      "time",
+      "topic_id",
+      "radius",
+      "fields",
+      "with_friends",
+      "self_groups",
+      "lat"
+    ],
+    "cargs": [
+      "zip",
+      "country",
+      "city",
+      "longitude",
+      "textFormat",
+      "categoryId",
+      "pageToken",
+      "state",
+      "time",
+      "topicId",
+      "radius",
+      "fields",
+      "withFriends",
+      "selfGroups",
+      "latitude"
+    ]
+  },
+  "getGroups": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/groups",
+    "args": [
+      "groupnum",
+      "topic",
+      "zip",
+      "lon",
+      "lat",
+      "group_urlname",
+      "topic",
+      "group_id",
+      "organizer_id",
+      "domain",
+      "member_id",
+      "radius",
+      "fields",
+      "category_id",
+      "state",
+      "city",
+      "country"
+    ],
+    "cargs": [
+      "groupNum",
+      "topic",
+      "zip",
+      "longitude",
+      "latitude",
+      "groupUrlName",
+      "topic",
+      "groupId",
+      "organizerId",
+      "domain",
+      "memberId",
+      "radius",
+      "fields",
+      "categoryId",
+      "state",
+      "city",
+      "country"
+    ]
+  },
+  "getEvents": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/events",
+    "args": [
+      "rsvp",
+      "group_urlname",
+      "event_id",
+      "group_id",
+      "limited_events",
+      "text_format",
+      "group_domain",
+      "venue_id",
+      "member_id",
+      "time",
+      "fields",
+      "status"
+    ],
+    "cargs": [
+      "rsvp",
+      "groupUrlName",
+      "eventId",
+      "groupId",
+      "limitedEvents",
+      "textFormat",
+      "groupDomain",
+      "venueId",
+      "memberId",
+      "time",
+      "fields",
+      "status"
+    ]
+  },
+  "postEvent": {
+    "method": "POST",
+    "res": "https://api.meetup.com/2/event",
+    "args": [
+      "rsvp_limit",
+      "rsvp_open",
+      "venue_visibility",
+      "hosts",
+      "question_*",
+      "group_urlname",
+      "why",
+      "description",
+      "how_to_find_us",
+      "group_id",
+      "rsvp_close",
+      "duration",
+      "name",
+      "guest_limit",
+      "simple_html_description",
+      "time",
+      "venue_id",
+      "publish_status"
+    ],
+    "cargs": [
+      "rsvpLimit",
+      "rsvpOpen",
+      "venueVisibility",
+      "hosts",
+      "addNewQuestions",
+      "groupUrlName",
+      "why",
+      "description",
+      "howToFindUs",
+      "groupId",
+      "rsvpClose",
+      "duration",
+      "name",
+      "guestLimit",
+      "simpleHtmlDescription",
+      "time",
+      "venueId",
+      "publishStatus"
+    ],
+    "multiprop": true
+  },
+  "editEvent": {
+    "method": "POST",
+    "res": "https://api.meetup.com/2/event/:id",
+    "args": [
+      "$id",
+      "lon",
+      "lat",
+      "rsvp_limit",
+      "rsvp_open",
+      "venue_visibility",
+      "hosts",
+      "question_*",
+      "why",
+      "description",
+      "how_to_find_us",
+      "rsvp_close",
+      "announce",
+      "duration",
+      "group_id",
+      "name",
+      "guest_limit",
+      "simple_html_description",
+      "time",
+      "question_edit_*",
+      "venue_id",
+      "publish_status"
+    ],
+    "cargs": [
+      "id",
+      "longitude",
+      "latitude",
+      "rsvpLimit",
+      "rsvpOpen",
+      "venueVisibility",
+      "hosts",
+      "addNewQuestions",
+      "why",
+      "description",
+      "howToFindUs",
+      "rsvpClose",
+      "announce",
+      "duration",
+      "groupId",
+      "name",
+      "guestLimit",
+      "simpleHtmlDescription",
+      "time",
+      "editQuestions",
+      "venueId",
+      "publishStatus"
+    ],
+    "multiprop": true
+  },
+  "deleteEvent": {
+    "method": "DELETE",
+    "res": "https://api.meetup.com/2/event/:id",
+    "args": [
+      "$id"
+    ],
+    "cargs": [
+      "id"
+    ]
+  },
+  "getCities": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/cities",
+    "args": [
+      "country",
+      "query",
+      "lon",
+      "state",
+      "radius",
+      "lat"
+    ],
+    "cargs": [
+      "country",
+      "query",
+      "longitude",
+      "state",
+      "radius",
+      "latitude"
+    ]
+  },
+  "getMembers": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/members",
+    "args": [
+      "groupnum",
+      "topic",
+      "group_urlname",
+      "member_id",
+      "fields",
+      "group_id",
+      "service"
+    ],
+    "cargs": [
+      "groupNum",
+      "topic",
+      "groupUrlName",
+      "memberId",
+      "fields",
+      "groupId",
+      "service"
+    ]
+  },
+  "getSingleMember": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/member/:id",
+    "args": [
+      "$id",
+      "fields"
+    ],
+    "cargs": [
+      "id",
+      "fields"
+    ]
+  },
+  "editSignleMember": {
+    "method": "POST",
+    "res": "https://api.meetup.com/2/member/:id",
+    "args": [
+      "$id",
+      "birthday",
+      "zip",
+      "country",
+      "hometown",
+      "remove_topics",
+      "gender",
+      "photo_id",
+      "city",
+      "topics_privacy",
+      "facebook_privacy",
+      "bio",
+      "lon",
+      "groups_privacy",
+      "add_topics",
+      "sync_photo",
+      "name",
+      "bio_privacy",
+      "photos_privacy",
+      "lang",
+      "radius",
+      "lat",
+      "messaging_pref",
+      "city_id"
+    ],
+    "cargs": [
+      "id",
+      "birthday",
+      "zip",
+      "country",
+      "hometown",
+      "removeTopics",
+      "gender",
+      "photoId",
+      "city",
+      "topicsPrivacy",
+      "facebookPrivacy",
+      "bio",
+      "longitude",
+      "groupsPrivacy",
+      "addTopics",
+      "syncPhoto",
+      "name",
+      "bioPrivacy",
+      "photosPrivacy",
+      "lang",
+      "radius",
+      "latitude",
+      "messagingPref",
+      "cityId"
+    ]
+  },
+  "getProfiles": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/profiles",
+    "args": [
+      "groupnum",
+      "topic",
+      "role",
+      "group_urlname",
+      "member_id",
+      "fields",
+      "group_id",
+      "status"
+    ],
+    "cargs": [
+      "groupNum",
+      "topic",
+      "role",
+      "groupUrlName",
+      "memberId",
+      "fields",
+      "groupId",
+      "status"
+    ]
+  },
+  "postProfile": {
+    "method": "POST",
+    "res": "https://api.meetup.com/2/profile",
+    "args": [
+      "site_name",
+      "photo_id",
+      "site_url",
+      "group_urlname",
+      "intro",
+      "new_photo",
+      "group_id",
+      "answer_*"
+    ],
+    "cargs": [
+      "siteName",
+      "photoId",
+      "siteUrl",
+      "groupUrlName",
+      "intro",
+      "newPhoto",
+      "groupId",
+      "provideAnswer"
+    ],
+    "multiprop": true
+  },
+  "editProfile": {
+    "method": "POST",
+    "res": "https://api.meetup.com/2/profile/:gid/:mid",
+    "args": [
+      "$gid",
+      "$mid",
+      "site_name",
+      "add_role",
+      "photo_id",
+      "site_url",
+      "intro",
+      "new_photo",
+      "title",
+      "remove_role",
+      "answer_*"
+    ],
+    "cargs": [
+      "groupId",
+      "memberId",
+      "siteName",
+      "addRole",
+      "photoId",
+      "siteUrl",
+      "intro",
+      "newPhoto",
+      "title",
+      "removeRole",
+      "provideAnswer"
+    ],
+    "multiprop": true
+  },
+  "getSingleProfile": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/profile/:gid/:mid",
+    "args": [
+      "$gid",
+      "$mid",
+      "fields"
+    ],
+    "cargs": [
+      "groupId",
+      "memberId",
+      "fields"
+    ]
+  },
+  "deleteProfile": {
+    "method": "DELETE",
+    "res": "https://api.meetup.com/2/profile/:gid/:mid",
+    "args": [
+      "$gid",
+      "$mid",
+      "exit_comment"
+    ],
+    "cargs": [
+      "groupId",
+      "memberId",
+      "exitComment"
+    ]
+  },
+  "deletePhoto": {
+    "method": "DELETE",
+    "res": "https://api.meetup.com/2/photo/:id",
+    "args": [
+      "$id"
+    ],
+    "cargs": [
+      "id"
+    ]
+  },
+  "deleteMemberPhoto": {
+    "method": "DELETE",
+    "res": "https://api.meetup.com/2/member_photo/:id",
+    "args": [
+      "$id"
+    ],
+    "cargs": [
+      "id"
+    ]
+  },
+  "getGroupComments": {
+    "method": "GET",
+    "res": "https://api.meetup.com/comments",
+    "args": [
+      "groupnum",
+      "topic",
+      "group_id",
+      "group_urlname"
+    ],
+    "cargs": [
+      "groupNum",
+      "topic",
+      "groupId",
+      "groupUrlName"
+    ]
+  },
+  "getEventComments": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/event_comments",
+    "args": [
+      "comment_id",
+      "member_id",
+      "fields",
+      "group_id",
+      "event_id"
+    ],
+    "cargs": [
+      "commentId",
+      "memberId",
+      "fields",
+      "groupId",
+      "eventId"
+    ]
+  },
+  "postEventComment": {
+    "method": "POST",
+    "res": "https://api.meetup.com/2/event_comment",
+    "args": [
+      "comment",
+      "in_reply_to",
+      "notifications",
+      "event_id"
+    ],
+    "cargs": [
+      "comment",
+      "inReplyTo",
+      "notifications",
+      "eventId"
+    ]
+  },
+  "getSingleEventComment": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/event_comment/:id",
+    "args": [
+      "$id",
+      "fields"
+    ],
+    "cargs": [
+      "id",
+      "fields"
+    ]
+  },
+  "deleteEventComment": {
+    "method": "DELETE",
+    "res": "https://api.meetup.com/2/event_comment/:id",
+    "args": [
+      "$id",
+      "fields"
+    ],
+    "cargs": [
+      "id",
+      "fields"
+    ]
+  },
+  "postEventCommentFlag": {
+    "method": "POST",
+    "res": "https://api.meetup.com/2/event_comment_flag",
+    "args": [
+      "comment_id",
+      "reason"
+    ],
+    "cargs": [
+      "commentId",
+      "reason"
+    ]
+  },
+  "deleteEventCommentSubscribe": {
+    "method": "DELETE",
+    "res": "https://api.meetup.com/2/event_comment_subscribe/:id",
+    "args": [
+      "$id"
+    ],
+    "cargs": [
+      "id"
+    ]
+  },
+  "postEventCommentSubscribe": {
+    "method": "POST",
+    "res": "https://api.meetup.com/2/event_comment_subscribe/:id",
+    "args": [
+      "$id"
+    ],
+    "cargs": [
+      "id"
+    ]
+  },
+  "postEventCommentLike": {
+    "method": "POST",
+    "res": "https://api.meetup.com/2/event_comment_like/:id",
+    "args": [
+      "$id"
+    ],
+    "cargs": [
+      "id"
+    ]
+  },
+  "deleteEventCommentLike": {
+    "method": "DELETE",
+    "res": "https://api.meetup.com/2/event_comment_like/:id",
+    "args": [
+      "$id"
+    ],
+    "cargs": [
+      "id"
+    ]
+  },
+  "getEventCommentLikes": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/event_comment_likes",
+    "args": [
+      "comment_id"
+    ],
+    "cargs": [
+      "commentId"
+    ]
+  },
+  "getPhotoComments": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/photo_comments",
+    "args": [
+      "member_id",
+      "photo_id",
+      "fields"
+    ],
+    "cargs": [
+      "memberId",
+      "photoId",
+      "fields"
+    ]
+  },
+  "postPhotoComment": {
+    "method": "POST",
+    "res": "https://api.meetup.com/2/photo_comment",
+    "args": [
+      "photo_id",
+      "comment"
+    ],
+    "cargs": [
+      "photoId",
+      "comment"
+    ]
+  },
+  "getEventRatings": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/event_ratings",
+    "args": [
+      "member_id",
+      "event_id"
+    ],
+    "cargs": [
+      "memberId",
+      "eventId"
+    ]
+  },
+  "postEventRating": {
+    "method": "POST",
+    "res": "https://api.meetup.com/2/event_rating",
+    "args": [
+      "attendee_count",
+      "rating",
+      "event_id"
+    ],
+    "cargs": [
+      "attendeeCount",
+      "rating",
+      "eventId"
+    ]
+  },
+  "getPhotoAlbums": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/photo_albums",
+    "args": [
+      "photo_album_id",
+      "group_id",
+      "event_id"
+    ],
+    "cargs": [
+      "photoAlbumId",
+      "groupId",
+      "eventId"
+    ]
+  },
+  "postPhotoAlbum": {
+    "method": "POST",
+    "res": "https://api.meetup.com/2/photo_album",
+    "args": [
+      "group_id",
+      "title"
+    ],
+    "cargs": [
+      "groupId",
+      "title"
+    ]
+  },
+  "getOpenVenues": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/open_venues",
+    "args": [
+      "lat",
+      "state",
+      "text",
+      "zip",
+      "country",
+      "lon",
+      "group_urlname",
+      "city",
+      "radius",
+      "fields"
+    ],
+    "cargs": [
+      "latitude",
+      "state",
+      "text",
+      "zip",
+      "country",
+      "longitude",
+      "groupUrlName",
+      "city",
+      "radius",
+      "fields"
+    ]
+  },
+  "getVenues": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/venues",
+    "args": [
+      "venue_id",
+      "fields",
+      "group_id",
+      "group_urlname",
+      "event_id"
+    ],
+    "cargs": [
+      "venueId",
+      "fields",
+      "groupId",
+      "groupUrlName",
+      "eventId"
+    ]
+  },
+  "getRSVPs": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/rsvps",
+    "args": [
+      "fields",
+      "rsvp",
+      "event_id"
+    ],
+    "cargs": [
+      "fields",
+      "rsvp",
+      "eventId"
+    ]
+  },
+  "postRSVP": {
+    "method": "POST",
+    "res": "https://api.meetup.com/2/rsvp",
+    "args": [
+      "rsvp",
+      "member_id",
+      "comments",
+      "event_id",
+      "guests",
+      "opt_to_pay",
+      "answer_*",
+      "agree_to_refund"
+    ],
+    "cargs": [
+      "rsvp",
+      "memberId",
+      "comments",
+      "eventId",
+      "guests",
+      "optionToPay",
+      "provideAnswer",
+      "agreeToRefund"
+    ],
+    "multiprop": true
+  },
+  "getSingleRSVP": {
+    "method": "GET",
+    "res": "https://api.meetup.com/2/rsvp/:id",
+    "args": [
+      "$id",
+      "fields"
+    ],
+    "cargs": [
+      "id",
+      "fields"
+    ]
+  },
+  "postGroupPhoto": {
+    "method": "POST",
+    "res": "https://api.meetup.com/2/group_photo",
+    "args": [
+      "await",
+      "main",
+      "group_id",
+      "photo",
+      "group_urlname"
+    ],
+    "cargs": [
+      "await",
+      "main",
+      "groupId",
+      "photo",
+      "groupUrlName"
+    ],
+    "multipartPhoto": true
+  },
+  "postMemberPhoto": {
+    "method": "POST",
+    "res": "https://api.meetup.com/2/member_photo",
+    "args": [
+      "await",
+      "main",
+      "sync_matching_photo",
+      "photo",
+      "sync_photo"
+    ],
+    "cargs": [
+      "await",
+      "main",
+      "syncMatchingPhoto",
+      "photo",
+      "syncPhoto"
+    ],
+    "multipartPhoto": true
+  },
+  "postPhoto": {
+    "method": "POST",
+    "res": "https://api.meetup.com/2/photo",
+    "args": [
+      "await",
+      "caption",
+      "photo_album_id",
+      "photo",
+      "event_id"
+    ],
+    "cargs": [
+      "await",
+      "caption",
+      "photoAlbumId",
+      "photo",
+      "eventId"
+    ],
+    "multipartPhoto": true
+  },
+  "getActivity": {
+    "method": "GET",
+    "res": "https://api.meetup.com/activity",
+    "args": [
+      "member_id",
+      "page_start"
+    ],
+    "cargs": [
+      "memberId",
+      "pageStart"
+    ]
+  },
+  "getOEMBed": {
+    "method": "GET",
+    "res": "https://api.meetup.com/oembed",
+    "args": [
+      "url",
+      "maxwidth"
+    ],
+    "cargs": [
+      "url",
+      "maxWidth"
+    ]
+  },
+  "getStatus": {
+    "method": "GET",
+    "res": "https://api.meetup.com/status",
+    "args": [],
+    "cargs": []
+  },
+  "membershipApproval": {
+    "method": "POST",
+    "res": "https://api.meetup.com/:urlname/member/approvals",
+    "args": [
+      "$urlname",
+      "member",
+      "welcome_message",
+      "send_copy"
+    ],
+    "cargs": [
+      "urlname",
+      "member",
+      "welcomeMessage",
+      "sendCopy"
+    ]
+  },
+  "getEventAttendance": {
+    "method": "GET",
+    "res": "https://api.meetup.com/:urlname/events/:id/attendance",
+    "args": [
+      "$urlname",
+      "$id",
+      "filter",
+      "member"
+    ],
+    "cargs": [
+      "urlname",
+      "id",
+      "filter",
+      "member"
+    ]
+  },
+  "takeEventAttendance": {
+    "method": "POST",
+    "res": "https://api.meetup.com/:urlname/events/:id/attendance",
+    "args": [
+      "$urlname",
+      "$id",
+      "guests",
+      "headcount",
+      "member",
+      "status"
+    ],
+    "cargs": [
+      "urlname",
+      "id",
+      "guests",
+      "headCount",
+      "member",
+      "status"
+    ]
+  },
+  "getBoards": {
+    "method": "GET",
+    "res": "https://api.meetup.com/:urlname/boards",
+    "args": [
+      "$urlname"
+    ],
+    "cargs": [
+      "urlname"
+    ]
+  },
+  "membershipDecline": {
+    "method": "DELETE",
+    "res": "https://api.meetup.com/:urlname/member/approvals",
+    "args": [
+      "$urlname",
+      "member",
+      "anon",
+      "send_copy",
+      "explanation",
+      "ban"
+    ],
+    "cargs": [
+      "urlname",
+      "member",
+      "anonymous",
+      "sendCopy",
+      "explanation",
+      "ban"
+    ]
+  },
+  "getDiscussions": {
+    "method": "GET",
+    "res": "https://api.meetup.com/:urlname/boards/:bid/discussions",
+    "args": [
+      "$urlname",
+      "$bid"
+    ],
+    "cargs": [
+      "urlname",
+      "boardId"
+    ]
+  },
+  "getSingleDiscussion": {
+    "method": "GET",
+    "res": "https://api.meetup.com/:urlname/boards/:bid/discussions/:did",
+    "args": [
+      "$urlname",
+      "$bid",
+      "$did"
+    ],
+    "cargs": [
+      "urlname",
+      "boardId",
+      "discussionId"
+    ]
+  },
+  "getSelfEvents": {
+    "method": "GET",
+    "res": "https://api.meetup.com/self/events",
+    "args": [
+      "scroll",
+      "page",
+      "fields",
+      "rsvp",
+      "desc",
+      "status"
+    ],
+    "cargs": [
+      "scroll",
+      "page",
+      "fields",
+      "rsvp",
+      "desc",
+      "status"
+    ]
+  },
+  "getSingleEvent": {
+    "method": "GET",
+    "res": "https://api.meetup.com/:urlname/events/:id",
+    "args": [
+      "$urlname",
+      "$id",
+      "fields"
+    ],
+    "cargs": [
+      "urlname",
+      "id",
+      "fields"
+    ]
+  },
+  "postEventPayments": {
+    "method": "POST",
+    "res": "https://api.meetup.com/:urlname/events/:id/payments",
+    "args": [
+      "$urlname",
+      "$id",
+      "amount",
+      "quantity",
+      "member",
+      "paid_on"
+    ],
+    "cargs": [
+      "urlname",
+      "id",
+      "amount",
+      "quantity",
+      "member",
+      "paidOn"
+    ]
+  },
+  "findGroups": {
+    "method": "GET",
+    "res": "https://api.meetup.com/find/groups",
+    "args": [
+      "zip",
+      "country",
+      "upcoming_events",
+      "lon",
+      "filter",
+      "fallback_suggestions",
+      "location",
+      "text",
+      "topic_id",
+      "radius",
+      "fields",
+      "category",
+      "self_groups",
+      "lat"
+    ],
+    "cargs": [
+      "zip",
+      "country",
+      "upcomingEvents",
+      "longitude",
+      "filter",
+      "fallbackSuggestions",
+      "location",
+      "text",
+      "topicId",
+      "radius",
+      "fields",
+      "category",
+      "selfGroups",
+      "latitude"
+    ]
+  },
+  "getSingleGroup": {
+    "method": "GET",
+    "res": "https://api.meetup.com/:urlname",
+    "args": [
+      "$urlname",
+      "fields"
+    ],
+    "cargs": [
+      "urlname",
+      "fields"
+    ]
+  },
+  "editGroup": {
+    "method": "POST",
+    "res": "https://api.meetup.com/:urlname",
+    "args": [
+      "$urlname",
+      "zip",
+      "country",
+      "list_mode",
+      "dryrun",
+      "ga_code",
+      "remove_topics",
+      "visibility",
+      "question_*",
+      "key_photo",
+      "photo_req",
+      "description",
+      "questions_req",
+      "welcome_message",
+      "join_mode",
+      "list_addr",
+      "add_topics",
+      "*_uri",
+      "name",
+      "question_edit_*",
+      "urlname",
+      "who"
+    ],
+    "cargs": [
+      "urlname",
+      "zip",
+      "country",
+      "listMode",
+      "dryrun",
+      "gaCode",
+      "removeTopics",
+      "visibility",
+      "addNewQuestions",
+      "keyPhoto",
+      "photoReq",
+      "description",
+      "questionsReq",
+      "welcomeMessage",
+      "joinMode",
+      "listAddr",
+      "addTopics",
+      "serviceUri",
+      "name",
+      "editQuestions",
+      "urlname",
+      "who"
+    ],
+    "multiprop": true
+  },
+  "postTopics": {
+    "method": "POST",
+    "res": "https://api.meetup.com/:urlname/topics",
+    "args": [
+      "$urlname",
+      "topic_id"
+    ],
+    "cargs": [
+      "urlname",
+      "topicId"
+    ]
+  },
+  "deleteTopics": {
+    "method": "DELETE",
+    "res": "https://api.meetup.com/:urlname/topics",
+    "args": [
+      "$urlname",
+      "topic_id"
+    ],
+    "cargs": [
+      "urlname",
+      "topicId"
+    ]
+  },
+  "getLocations": {
+    "method": "GET",
+    "res": "https://api.meetup.com/find/locations",
+    "args": [
+      "lon",
+      "page",
+      "offset",
+      "lat",
+      "query"
+    ],
+    "cargs": [
+      "longitude",
+      "page",
+      "offset",
+      "latitude",
+      "query"
+    ]
+  },
+  "getSelfCalendar": {
+    "method": "GET",
+    "res": "https://api.meetup.com/self/calendar",
+    "args": [
+      "fields",
+      "page"
+    ],
+    "cargs": [
+      "fields",
+      "page"
+    ]
+  },
+  "getSelfGroups": {
+    "method": "GET",
+    "res": "https://api.meetup.com/self/groups",
+    "args": [
+      "fields",
+      "page"
+    ],
+    "cargs": [
+      "fields",
+      "page"
+    ]
+  },
+  "getPROGroups": {
+    "method": "GET",
+    "res": "https://api.meetup.com/pro/:urlname/groups",
+    "args": [
+      "$urlname",
+      "country",
+      "past_rsvps_min",
+      "past_events_min",
+      "member_count_max",
+      "upcoming_events_min",
+      "lon",
+      "last_event_min",
+      "repeat_rsvpers_min",
+      "average_age_min",
+      "last_event_max",
+      "radius",
+      "lat",
+      "founded_date_min",
+      "order",
+      "zip",
+      "inactive_within_days",
+      "offset",
+      "topics",
+      "upcoming_events_max",
+      "average_age_max",
+      "pro_join_date_max",
+      "next_event_min",
+      "past_rsvps_max",
+      "active_within_days",
+      "rsvps_per_event_min",
+      "founded_date_max",
+      "member_count_min",
+      "past_events_max",
+      "name",
+      "next_event_max",
+      "repeat_rsvpers_max",
+      "location",
+      "page",
+      "pro_join_date_min",
+      "rsvps_per_event_max",
+      "category",
+      "desc"
+    ],
+    "cargs": [
+      "urlname",
+      "country",
+      "pastRsvpsMin",
+      "pastEventsMin",
+      "memberCountMax",
+      "upcomingEventsMin",
+      "longitude",
+      "lastEventMin",
+      "repeatRsvpersMin",
+      "averageAgeMin",
+      "lastEventMax",
+      "radius",
+      "latitude",
+      "foundedDateMin",
+      "order",
+      "zip",
+      "inactiveWithinDays",
+      "offset",
+      "topics",
+      "upcomingEventsMax",
+      "averageAgeMax",
+      "proJoinDateMax",
+      "nextEventMin",
+      "pastRsvpsMax",
+      "activeWithinDays",
+      "rsvpsPerEventMin",
+      "foundedDateMax",
+      "memberCountMin",
+      "pastEventsMax",
+      "name",
+      "nextEventMax",
+      "repeatRsvpersMax",
+      "location",
+      "page",
+      "proJoinDateMin",
+      "rsvpsPerEventMax",
+      "category",
+      "desc"
+    ]
+  },
+  "getPROMembers": {
+    "method": "GET",
+    "res": "https://api.meetup.com/pro/:urlname/members",
+    "args": [
+      "$urlname",
+      "zip",
+      "country",
+      "events_attended_max",
+      "offset",
+      "chapters",
+      "is_organizer",
+      "lon",
+      "member_name",
+      "active_within_days",
+      "join_time_min",
+      "email_received",
+      "events_attended_min",
+      "location",
+      "page",
+      "radius",
+      "join_time_max",
+      "lat",
+      "desc",
+      "order"
+    ],
+    "cargs": [
+      "urlname",
+      "zip",
+      "country",
+      "eventsAttendedMax",
+      "offset",
+      "chapters",
+      "isOrganizer",
+      "longitude",
+      "memberName",
+      "activeWithinDays",
+      "joinTimeMin",
+      "emailReceived",
+      "eventsAttendedMin",
+      "location",
+      "page",
+      "radius",
+      "joinTimeMax",
+      "latitude",
+      "desc",
+      "order"
+    ]
+  },
+  "getNotifications": {
+    "method": "GET",
+    "res": "https://api.meetup.com/notifications",
+    "args": [
+      "fields"
+    ],
+    "cargs": [
+      "fields"
+    ]
+  },
+  "setNotificationsRead": {
+    "method": "POST",
+    "res": "https://api.meetup.com/notifications/read",
+    "args": [
+      "fields",
+      "since_id"
+    ],
+    "cargs": [
+      "fields",
+      "sinceId"
+    ]
+  },
+  "findTopicCategories": {
+    "method": "GET",
+    "res": "https://api.meetup.com/find/topic_categories",
+    "args": [
+      "lon",
+      "fields",
+      "radius",
+      "lat"
+    ],
+    "cargs": [
+      "longitude",
+      "fields",
+      "radius",
+      "latitude"
+    ]
+  },
+  "getRecommendedGroupTopics": {
+    "method": "GET",
+    "res": "https://api.meetup.com/recommended/group_topics",
+    "args": [
+      "page",
+      "text",
+      "lang",
+      "other_topics",
+      "exclude_topics"
+    ],
+    "cargs": [
+      "page",
+      "text",
+      "lang",
+      "otherTopics",
+      "excludeTopics"
+    ]
+  },
+  "getRecommendedGroups": {
+    "method": "GET",
+    "res": "https://api.meetup.com/recommended/groups",
+    "args": [
+      "zip",
+      "country",
+      "instant_join_only",
+      "location",
+      "lon",
+      "topic_id",
+      "radius",
+      "fields",
+      "category",
+      "lat"
+    ],
+    "cargs": [
+      "zip",
+      "country",
+      "instantJoinOnly",
+      "location",
+      "longitude",
+      "topicId",
+      "radius",
+      "fields",
+      "category",
+      "latitude"
+    ]
+  },
+  "postRecommendedGroupsIgnore": {
+    "method": "POST",
+    "res": "https://api.meetup.com/recommended/groups/ignores/:urlname",
+    "args": [
+      "$urlname"
+    ],
+    "cargs": [
+      "urlname"
+    ]
+  },
+  "getRecommendedVenues": {
+    "method": "GET",
+    "res": "https://api.meetup.com/recommended/venues",
+    "args": [
+      "zip",
+      "country",
+      "used_between",
+      "min_groups",
+      "group_id",
+      "location",
+      "lon",
+      "radius",
+      "category",
+      "group_urlname",
+      "lat"
+    ],
+    "cargs": [
+      "zip",
+      "country",
+      "usedBetween",
+      "minGroups",
+      "groupId",
+      "location",
+      "longitude",
+      "radius",
+      "category",
+      "groupUrlName",
+      "latitude"
+    ]
+  },
+  "getSimilarGroups": {
+    "method": "GET",
+    "res": "https://api.meetup.com/:urlname/similar_groups",
+    "args": [
+      "$urlname"
+    ],
+    "cargs": [
+      "urlname"
+    ]
+  },
+  "findTopics": {
+    "method": "GET",
+    "res": "https://api.meetup.com/find/topics",
+    "args": [
+      "query",
+      "page"
+    ],
+    "cargs": [
+      "query",
+      "page"
+    ]
+  }
+}
