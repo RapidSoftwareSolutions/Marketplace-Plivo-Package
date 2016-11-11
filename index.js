@@ -46,19 +46,16 @@ for(let func in control) {
         req.body.args = lib.clearArgs(req.body.args);
 
         try {
-            if(!req.body.args['authToken'] || !req.body.args['authId'])
-                throw new Error('Invalid credentials.');
-
             let authopts = {
                 type:     'basic',
                 username: req.body.args['authId'],
                 password: req.body.args['authToken']
             }
 
-            delete req.body.args['authToken'];
-
             for(let arg in args) 
                 opts[args[arg]] = req.body.args[arg];
+
+            opts['$!auth_token'] = req.body.args['authToken'];
 
             method == 'GET' || method == 'DELETE' ? options.query = opts : options.body = opts;
             options.method    = method;
