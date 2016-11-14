@@ -9,7 +9,7 @@ const express       = require('express'),
     lib             = require('./lib'),
     _               = lib.callback;
 
-const PORT          = process.env.PORT || 8080;
+const PORT          = process.env.PORT || 8081;
 const app           = express();
 
 let mfile = fs.readFileSync('./metadata.json', 'utf-8'),
@@ -21,6 +21,10 @@ let metadata = JSON.parse(mfile),
 app.use(bodyParser.json(({limit: '50mb'})));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.all(`/api/${PACKAGE_NAME}`, (req, res) => { res.send(metadata); });
+
+app.all(`/api/${PACKAGE_NAME}/timeout`, (req, res) => {
+    // ... 
+})
 
 for(let func in control) {
     let options = {
@@ -65,7 +69,7 @@ for(let func in control) {
 
             response            = yield api.auth(authopts).request(options);
             r.callback          = 'success';
-            r.contextWrites[to] = response == '' ? 'Successfully deleted!' : response;
+            r.contextWrites[to] = response == '' ? 'Success!' : response;
         } catch(e) {
             r.callback          = 'error';
             r.contextWrites[to] = e.message ? e.message : e;
