@@ -265,7 +265,7 @@
     },
     "playText": {
         "url": "https://api.plivo.com/v1/Account/{auth_id}/Call/{call_uuid}/Speak/",
-        "method": "DELETE",
+        "method": "POST",
         "args": {
             "authId": "$!auth_id",
             "callUuid": "$!call_uuid",
@@ -279,7 +279,7 @@
     },
     "stopPlayingText": {
         "url": "https://api.plivo.com/v1/Account/{auth_id}/Call/{call_uuid}/Speak/",
-        "method": "POST",
+        "method": "DELETE",
         "args": {
             "authId": "$!auth_id",
             "callUuid": "$!call_uuid"
