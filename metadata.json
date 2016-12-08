@@ -2,6 +2,7 @@
   "package": "Plivo",
   "tagline": "Plivo API Package",
   "description": "Global SMS & Voice calls for businesses of all sizes",
+  "keywords": ["API", "call", "calling", "calls", "messaging", "phone", "smb", "sms", "text", "voice"],
   "image": "http://logo.clearbit.com/plivo.com",
   "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-Plivo-Package",
   "accounts": {
@@ -18,22 +19,26 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -44,37 +49,44 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "name",
           "type": "String",
-          "info": "Name of the account holder or business."
+          "info": "Name of the account holder or business.",
+          "required": false
         },
         {
           "name": "city",
           "type": "String",
-          "info": "City of the account holder."
+          "info": "City of the account holder.",
+          "required": false
         },
         {
           "name": "address",
           "type": "String",
-          "info": "Address of the account holder."
+          "info": "Address of the account holder.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -85,32 +97,38 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "name",
           "type": "String",
-          "info": "Required: Name of the subaccount"
+          "info": "Name of the subaccount",
+          "required": true
         },
         {
           "name": "enabled",
           "type": "String",
-          "info": "Specify if the subaccount should be enabled or not. Takes a value of True or False. Defaults to False"
+          "info": "Specify if the subaccount should be enabled or not. Takes a value of True or False. Defaults to False",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -121,37 +139,44 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "subauthId",
           "type": "String",
-          "info": "Required: Valid subauthId"
+          "info": "Valid subauthId",
+          "required": true
         },
         {
           "name": "name",
           "type": "String",
-          "info": "Required: Name of the subaccount"
+          "info": "Name of the subaccount",
+          "required": true
         },
         {
           "name": "enabled",
           "type": "String",
-          "info": "Specify if the subaccount should be enabled or not. Takes a value of True or False. Defaults to False"
+          "info": "Specify if the subaccount should be enabled or not. Takes a value of True or False. Defaults to False",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -162,27 +187,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "subauthId",
           "type": "String",
-          "info": "Required: Valid subauthId."
+          "info": "Valid subauthId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -193,32 +223,38 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "offset",
           "type": "credentials",
-          "info": "Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results."
+          "info": "Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results.",
+          "required": false
         },
         {
           "name": "limit",
           "type": "String",
-          "info": "Used to display the number of results per page. The maximum number of results that can be fetched is 20."
+          "info": "Used to display the number of results per page. The maximum number of results that can be fetched is 20.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -229,27 +265,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "subauthId",
           "type": "String",
-          "info": "Required: Valid subauthId."
+          "info": "Valid subauthId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -260,82 +301,98 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "answerUrl",
           "type": "String",
-          "info": "Required: The URL Plivo will fetch when a call executes this application."
+          "info": "The URL Plivo will fetch when a call executes this application.",
+          "required": true
         },
         {
           "name": "appName",
           "type": "String",
-          "info": "Required: The name of your application"
+          "info": "The name of your application",
+          "required": true
         },
         {
           "name": "answerMethod",
           "type": "String",
-          "info": "The method used to call the answer_url. Defaults to POST."
+          "info": "The method used to call the answer_url. Defaults to POST.",
+          "required": false
         },
         {
           "name": "hangupUrl",
           "type": "String",
-          "info": "The URL that will be notified by Plivo when the call hangs up. Defaults to answer_url. More details"
+          "info": "The URL that will be notified by Plivo when the call hangs up. Defaults to answer_url. More details",
+          "required": false
         },
         {
           "name": "hangupMethod",
           "type": "String",
-          "info": "The method used to call the hangup_url. Defaults to POST."
+          "info": "The method used to call the hangup_url. Defaults to POST.",
+          "required": false
         },
         {
           "name": "fallbackAnswerUrl",
           "type": "String",
-          "info": "Invoked by Plivo only if answer_url is unavailable or the XML response is invalid. Should contain a XML response."
+          "info": "Invoked by Plivo only if answer_url is unavailable or the XML response is invalid. Should contain a XML response.",
+          "required": false
         },
         {
           "name": "fallbackMethod",
           "type": "String",
-          "info": "The method used to call the fallback_answer_url. Defaults to POST."
+          "info": "The method used to call the fallback_answer_url. Defaults to POST.",
+          "required": false
         },
         {
           "name": "messageUrl",
           "type": "String",
-          "info": "The URL that will be notified by Plivo when an inbound message is received. Defaults not set. More details"
+          "info": "The URL that will be notified by Plivo when an inbound message is received. Defaults not set. More details",
+          "required": false
         },
         {
           "name": "messageMethod",
           "type": "String",
-          "info": "The method used to call the message_url. Defaults to POST."
+          "info": "The method used to call the message_url. Defaults to POST.",
+          "required": false
         },
         {
           "name": "defaultNumberApp",
           "type": "String",
-          "info": "Boolean parameter. If set to true, this parameter ensures that newly created numbers, which don't have an app_id, point to this application."
+          "info": "Boolean parameter. If set to true, this parameter ensures that newly created numbers, which don't have an app_id, point to this application.",
+          "required": false
         },
         {
           "name": "defaultEndpointApp",
           "type": "String",
-          "info": "Boolean parameter. If set to true, this parameter ensures that newly created endpoints, which don't have an app_id, point to this application."
+          "info": "Boolean parameter. If set to true, this parameter ensures that newly created endpoints, which don't have an app_id, point to this application.",
+          "required": false
         },
         {
           "name": "subaccount",
           "type": "String",
-          "info": "Id of the subaccount, in case only subaccount applications are needed."
+          "info": "Id of the subaccount, in case only subaccount applications are needed.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -346,37 +403,44 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "subaccount",
           "type": "String",
-          "info": "Id of the subaccount, in case only subaccount applications are needed."
+          "info": "Id of the subaccount, in case only subaccount applications are needed.",
+          "required": false
         },
         {
           "name": "limit",
           "type": "String",
-          "info": "Used to display the number of results per page. The maximum number of results that can be fetched is 20."
+          "info": "Used to display the number of results per page. The maximum number of results that can be fetched is 20.",
+          "required": false
         },
         {
           "name": "offset",
           "type": "String",
-          "info": "Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results."
+          "info": "Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -387,27 +451,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "appId",
           "type": "String",
-          "info": "Required: Valid appId."
+          "info": "Valid appId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -418,82 +487,98 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "appId",
           "type": "credentials",
-          "info": "Required: Valid appId."
+          "info": "Valid appId.",
+          "required": true
         },
         {
           "name": "answerUrl",
           "type": "String",
-          "info": "The URL Plivo will fetch when a call executes this application."
+          "info": "The URL Plivo will fetch when a call executes this application.",
+          "required": false
         },
         {
           "name": "answerMethod",
           "type": "String",
-          "info": "The method used to call the answer_url. Defaults to POST."
+          "info": "The method used to call the answer_url. Defaults to POST.",
+          "required": false
         },
         {
           "name": "hangupUrl",
           "type": "String",
-          "info": "The URL that will be notified by Plivo when the call hangs up. Defaults to answer_url. More details"
+          "info": "The URL that will be notified by Plivo when the call hangs up. Defaults to answer_url. More details",
+          "required": false
         },
         {
           "name": "hangupMethod",
           "type": "String",
-          "info": "The method used to call the hangup_url. Defaults to POST."
+          "info": "The method used to call the hangup_url. Defaults to POST.",
+          "required": false
         },
         {
           "name": "fallbackAnswerUrl",
           "type": "String",
-          "info": "Invoked by Plivo only if answer_url is unavailable or the XML response is invalid. Should contain a XML response."
+          "info": "Invoked by Plivo only if answer_url is unavailable or the XML response is invalid. Should contain a XML response.",
+          "required": false
         },
         {
           "name": "fallbackMethod",
           "type": "String",
-          "info": "The method used to call the fallback_answer_url. Defaults to POST."
+          "info": "The method used to call the fallback_answer_url. Defaults to POST.",
+          "required": false
         },
         {
           "name": "messageUrl",
           "type": "String",
-          "info": "The URL that will be notified by Plivo when an inbound message is received. Defaults not set. More details"
+          "info": "The URL that will be notified by Plivo when an inbound message is received. Defaults not set. More details",
+          "required": false
         },
         {
           "name": "messageMethod",
           "type": "String",
-          "info": "The method used to call the message_url. Defaults to POST."
+          "info": "The method used to call the message_url. Defaults to POST.",
+          "required": false
         },
         {
           "name": "defaultNumberApp",
           "type": "String",
-          "info": "Boolean parameter. If set to true, this parameter ensures that newly created numbers, which don't have an app_id, point to this application."
+          "info": "Boolean parameter. If set to true, this parameter ensures that newly created numbers, which don't have an app_id, point to this application.",
+          "required": false
         },
         {
           "name": "defaultEndpointApp",
           "type": "String",
-          "info": "Boolean parameter. If set to true, this parameter ensures that newly created endpoints, which don't have an app_id, point to this application."
+          "info": "Boolean parameter. If set to true, this parameter ensures that newly created endpoints, which don't have an app_id, point to this application.",
+          "required": false
         },
         {
           "name": "subaccount",
           "type": "String",
-          "info": "Id of the subaccount, in case only subaccount applications are needed."
+          "info": "Id of the subaccount, in case only subaccount applications are needed.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -504,27 +589,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "appId",
           "type": "String",
-          "info": "Required: Valid appId."
+          "info": "Valid appId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -535,137 +625,164 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "callFrom",
           "type": "String",
-          "info": "Required: The phone number to be used as the caller id (with the country code).For e.g, a USA caller id number could be, 15677654321, with '1' for the country code."
+          "info": "The phone number to be used as the caller id (with the country code).For e.g, a USA caller id number could be, 15677654321, with '1' for the country code.",
+          "required": true
         },
         {
           "name": "callTo",
           "type": "String",
-          "info": "Required: The regular number(s) or sip endpoint(s) to call. Regular number must be prefixed with country code but without the + sign). For e.g, to dial a number in the USA, the number could be, 15677654321, with '1' for the country code. Multiple numbers can be sent by using a delimiter. For e.g. 15677654321<12077657621<12047657621. Sip endpoints must be prefixed with sip: E.g., sip:john1234@phone.plivo.com. To make bulk calls, the delimiter < is used. For example, 15677654321<15673464321<sip:john1234@phone.plivo.com Yes, you can mix regular numbers and sip endpoints."
+          "info": "The regular number(s) or sip endpoint(s) to call. Regular number must be prefixed with country code but without the + sign). For e.g, to dial a number in the USA, the number could be, 15677654321, with '1' for the country code. Multiple numbers can be sent by using a delimiter. For e.g. 15677654321<12077657621<12047657621. Sip endpoints must be prefixed with sip: E.g., sip:john1234@phone.plivo.com. To make bulk calls, the delimiter < is used. For example, 15677654321<15673464321<sip:john1234@phone.plivo.com Yes, you can mix regular numbers and sip endpoints.",
+          "required": true
         },
         {
           "name": "answerUrl",
           "type": "String",
-          "info": "Required: The URL invoked by Plivo when the outbound call is answered."
+          "info": "The URL invoked by Plivo when the outbound call is answered.",
+          "required": true
         },
         {
           "name": "answerMethod ",
           "type": "String",
-          "info": "The method used to call the answer_url. Defaults to POST."
+          "info": "The method used to call the answer_url. Defaults to POST.",
+          "required": false
         },
         {
           "name": "ringUrl",
           "type": "String",
-          "info": "The URL that is notified by Plivo when the call is ringing. Defaults not set."
+          "info": "The URL that is notified by Plivo when the call is ringing. Defaults not set.",
+          "required": false
         },
         {
           "name": "ringMethod",
           "type": "String",
-          "info": "The method used to call the ring_url. Defaults to POST."
+          "info": "The method used to call the ring_url. Defaults to POST.",
+          "required": false
         },
         {
           "name": "hangupUrl",
           "type": "String",
-          "info": "The URL that is notified by Plivo when the call hangs up. Defaults to answer_url."
+          "info": "The URL that is notified by Plivo when the call hangs up. Defaults to answer_url.",
+          "required": false
         },
         {
           "name": "hangupMethod",
           "type": "String",
-          "info": "The method used to call the hangup_url. Defaults to POST."
+          "info": "The method used to call the hangup_url. Defaults to POST.",
+          "required": false
         },
         {
           "name": "fallbackUrl",
           "type": "String",
-          "info": "Invoked by Plivo only if answer_url is unavailable or the XML response is invalid. Should contain a XML response."
+          "info": "Invoked by Plivo only if answer_url is unavailable or the XML response is invalid. Should contain a XML response.",
+          "required": false
         },
         {
           "name": "fallbackMethod",
           "type": "String",
-          "info": "The method used to call the fallback_url. Defaults to POST."
+          "info": "The method used to call the fallback_url. Defaults to POST.",
+          "required": false
         },
         {
           "name": "callerName",
           "type": "String",
-          "info": "Caller name to use with the call."
+          "info": "Caller name to use with the call.",
+          "required": false
         },
         {
           "name": "sendDigits",
           "type": "String",
-          "info": "Plivo plays DTMF tones when the call is answered. This is useful when dialing a phone number and an extension. Plivo will dial the number, and when the automated system picks up, sends the DTMF tones to connect to the extension. E.g. If you want to dial the 2410 extension after the call is connected, and you want to wait for a few seconds before sending the extension, add a few leading 'w' characters. Each 'w' character waits 0.5 second before sending a digit. Each 'W' character waits 1 second before sending a digit. You can also add the tone duration in ms by appending @duration after the string (default duration is 2000 ms). For example, 1w2w3@1000 See the DTMF API for additional information."
+          "info": "Plivo plays DTMF tones when the call is answered. This is useful when dialing a phone number and an extension. Plivo will dial the number, and when the automated system picks up, sends the DTMF tones to connect to the extension. E.g. If you want to dial the 2410 extension after the call is connected, and you want to wait for a few seconds before sending the extension, add a few leading 'w' characters. Each 'w' character waits 0.5 second before sending a digit. Each 'W' character waits 1 second before sending a digit. You can also add the tone duration in ms by appending @duration after the string (default duration is 2000 ms). For example, 1w2w3@1000 See the DTMF API for additional information.",
+          "required": false
         },
         {
           "name": "sendOnPreanswer",
           "type": "String",
-          "info": "If set to true and send_digits is also set, digits are sent when the call is in preanswer state. Defaults to false."
+          "info": "If set to true and send_digits is also set, digits are sent when the call is in preanswer state. Defaults to false.",
+          "required": false
         },
         {
           "name": "timeLimit",
           "type": "String",
-          "info": "Schedules the call for hangup at a specified time after the call is answered. Value should be an integer > 0(in seconds)."
+          "info": "Schedules the call for hangup at a specified time after the call is answered. Value should be an integer > 0(in seconds).",
+          "required": false
         },
         {
           "name": "hangupOnRing",
           "type": "String",
-          "info": "Schedules the call for hangup at a specified time after the call starts ringing. Value should be an integer >= 0 (in seconds)."
+          "info": "Schedules the call for hangup at a specified time after the call starts ringing. Value should be an integer >= 0 (in seconds).",
+          "required": false
         },
         {
           "name": "machineDetection",
           "type": "String",
-          "info": "Used to detect if the call has been answered by a machine. The valid values are true and hangup. Default time to analyze is 5000 milliseconds (or 5 seconds). You can change it with the machine_detection_time parameter. Note that no XML is processed during the analysis phase. If a machine is detected during the call and machine_detection is set to true, the Machine parameter will be set to true and will be sent to the answer_url, hangup_url, or any other URL that is invoked by the call. If a machine is detected during the call and machine_detection is set to hangup, the call hangs up immediately and a request is made to the hangup_url with the Machine parameter set to true"
+          "info": "Used to detect if the call has been answered by a machine. The valid values are true and hangup. Default time to analyze is 5000 milliseconds (or 5 seconds). You can change it with the machine_detection_time parameter. Note that no XML is processed during the analysis phase. If a machine is detected during the call and machine_detection is set to true, the Machine parameter will be set to true and will be sent to the answer_url, hangup_url, or any other URL that is invoked by the call. If a machine is detected during the call and machine_detection is set to hangup, the call hangs up immediately and a request is made to the hangup_url with the Machine parameter set to true",
+          "required": false
         },
         {
           "name": "machineDetectionTime",
           "type": "String",
-          "info": "Time allotted to analyze if the call has been answered by a machine. It should be an integer >= 2000 and <= 10000 and the unit is ms. The default value is 5000 ms."
+          "info": "Time allotted to analyze if the call has been answered by a machine. It should be an integer >= 2000 and <= 10000 and the unit is ms. The default value is 5000 ms.",
+          "required": false
         },
         {
           "name": "machineDetectionUrl",
           "type": "String",
-          "info": "A URL where machine detection parameters will be sent by Plivo. This parameter should be used to make machine detection asynchronous"
+          "info": "A URL where machine detection parameters will be sent by Plivo. This parameter should be used to make machine detection asynchronous",
+          "required": false
         },
         {
           "name": "machineDetectionMethod",
           "type": "String",
-          "info": "The HTTP method which will be used by Plivo to request the machine_detection_url. Defaults to POST."
+          "info": "The HTTP method which will be used by Plivo to request the machine_detection_url. Defaults to POST.",
+          "required": false
         },
         {
           "name": "sipHeaders",
           "type": "String",
-          "info": "List of SIP headers in the form of 'key=value' pairs, separated by commas. E.g. head1=val1,head2=val2,head3=val3,...,headN=valN. The SIP headers are always prefixed with X-PH-. The SIP headers are present for every HTTP request made by the outbound call. Only [A-Z], [a-z] and [0-9] characters are allowed for the SIP headers key and value. Additionally, the '%' character is also allowed for the SIP headers value so that you can encode this value in the URL."
+          "info": "List of SIP headers in the form of 'key=value' pairs, separated by commas. E.g. head1=val1,head2=val2,head3=val3,...,headN=valN. The SIP headers are always prefixed with X-PH-. The SIP headers are present for every HTTP request made by the outbound call. Only [A-Z], [a-z] and [0-9] characters are allowed for the SIP headers key and value. Additionally, the '%' character is also allowed for the SIP headers value so that you can encode this value in the URL.",
+          "required": false
         },
         {
           "name": "ringTimeout",
           "type": "String",
-          "info": "Determines the time in seconds the call should ring. If the call is not answered within the ring_timeout value or the default value of 120s, it is canceled."
+          "info": "Determines the time in seconds the call should ring. If the call is not answered within the ring_timeout value or the default value of 120s, it is canceled.",
+          "required": false
         },
         {
           "name": "parentCallUuid",
           "type": "String",
-          "info": "The call_uuid of the first leg in an ongoing conference call. It is recommended to use this parameter in scenarios where a member who is already present in the conference intends to add new members by initiating outbound API calls. This minimizes the delay in adding a new memeber to the conference."
+          "info": "The call_uuid of the first leg in an ongoing conference call. It is recommended to use this parameter in scenarios where a member who is already present in the conference intends to add new members by initiating outbound API calls. This minimizes the delay in adding a new memeber to the conference.",
+          "required": false
         },
         {
           "name": "errorIfParentNotFound ",
           "type": "String",
-          "info": "if set to true and the parent_call_uuid cannot be found, the API request would return an error. If set to false, the outbound call API request will be executed even if the parent_call_uuid is not found. Defaults to false."
+          "info": "if set to true and the parent_call_uuid cannot be found, the API request would return an error. If set to false, the outbound call API request will be executed even if the parent_call_uuid is not found. Defaults to false.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -676,57 +793,68 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "callDirection",
           "type": "String",
-          "info": "Filter the results by call direction. The valid inputs are inbound and outbound."
+          "info": "Filter the results by call direction. The valid inputs are inbound and outbound.",
+          "required": false
         },
         {
           "name": "fromNumber",
           "type": "String",
-          "info": "Filter the results by the number from where the call originated."
+          "info": "Filter the results by the number from where the call originated.",
+          "required": false
         },
         {
           "name": "toNumber",
           "type": "String",
-          "info": "Filter the results by the number to which the call was made."
+          "info": "Filter the results by the number to which the call was made.",
+          "required": false
         },
         {
           "name": "billDuration",
           "type": "String",
-          "info": "Filter the results according to billed duration."
+          "info": "Filter the results according to billed duration.",
+          "required": false
         },
         {
           "name": "endTime",
           "type": "String",
-          "info": "Filter out calls according to the time of completion."
+          "info": "Filter out calls according to the time of completion.",
+          "required": false
         },
         {
           "name": "limit",
           "type": "String",
-          "info": "Used to display the number of results per page. The maximum number of results that can be fetched is 20."
+          "info": "Used to display the number of results per page. The maximum number of results that can be fetched is 20.",
+          "required": false
         },
         {
           "name": "offset",
           "type": "String",
-          "info": "Denotes the number of value items by which the results should be offset. E.g., If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results."
+          "info": "Denotes the number of value items by which the results should be offset. E.g., If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -737,27 +865,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "callUuid",
           "type": "String",
-          "info": "Required: Valid callUuid."
+          "info": "Valid callUuid.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -768,22 +901,26 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -794,27 +931,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "callUuid",
           "type": "String",
-          "info": "Required: Valid callUuid."
+          "info": "Valid callUuid.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -825,27 +967,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "callUuid",
           "type": "String",
-          "info": "Required: Valid callUuid."
+          "info": "Valid callUuid.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -856,22 +1003,26 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -882,52 +1033,62 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "callUuid",
           "type": "String",
-          "info": "Required: Valid callUuid."
+          "info": "Valid callUuid.",
+          "required": true
         },
         {
           "name": "legs",
           "type": "String",
-          "info": "aleg, bleg or both Defaults to aleg. aleg will transfer call_uuid ; bleg will transfer the bridged leg (if found) of call_uuid ; both will transfer call_uuid and bridged leg of call_uuid"
+          "info": "aleg, bleg or both Defaults to aleg. aleg will transfer call_uuid ; bleg will transfer the bridged leg (if found) of call_uuid ; both will transfer call_uuid and bridged leg of call_uuid",
+          "required": false
         },
         {
           "name": "alegUrl",
           "type": "String",
-          "info": "URL to transfer for aleg, if legs is aleg or both, then aleg_url has to be specified."
+          "info": "URL to transfer for aleg, if legs is aleg or both, then aleg_url has to be specified.",
+          "required": false
         },
         {
           "name": "alegMethod",
           "type": "String",
-          "info": "HTTP method to invoke aleg_url. Defaults to POST."
+          "info": "HTTP method to invoke aleg_url. Defaults to POST.",
+          "required": false
         },
         {
           "name": "blegUrl",
           "type": "String",
-          "info": "URL to transfer for bridged leg, if legs is bleg or both, then bleg_url has to be specified."
+          "info": "URL to transfer for bridged leg, if legs is bleg or both, then bleg_url has to be specified.",
+          "required": false
         },
         {
           "name": "blegMethod",
           "type": "String",
-          "info": "HTTP method to invoke bleg_url. Defaults to POST."
+          "info": "HTTP method to invoke bleg_url. Defaults to POST.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -938,62 +1099,74 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "callUuid",
           "type": "String",
-          "info": "Required: Valid callUuid."
+          "info": "Valid callUuid.",
+          "required": true
         },
         {
           "name": "timeLimit",
           "type": "String",
-          "info": "Max recording duration in seconds. Defaults to 60."
+          "info": "Max recording duration in seconds. Defaults to 60.",
+          "required": false
         },
         {
           "name": "fileFormat",
           "type": "String",
-          "info": "The format of the recording. The valid formats are mp3 and wav formats. Defaults to mp3."
+          "info": "The format of the recording. The valid formats are mp3 and wav formats. Defaults to mp3.",
+          "required": false
         },
         {
           "name": "transcriptionType",
           "type": "String",
-          "info": "The type of transcription required. The following values are allowed: auto - This is the default value. Transcription is completely automated; turnaround time is about 5 minutes. hybrid - Transcription is a combination of automated and human verification processes; turnaround time is about 10-15 minutes. "
+          "info": "The type of transcription required. The following values are allowed: auto - This is the default value. Transcription is completely automated; turnaround time is about 5 minutes. hybrid - Transcription is a combination of automated and human verification processes; turnaround time is about 10-15 minutes. ",
+          "required": false
         },
         {
           "name": "transcriptionUrl",
           "type": "String",
-          "info": "The URL where the transcription is available."
+          "info": "The URL where the transcription is available.",
+          "required": false
         },
         {
           "name": "transcriptionMethod",
           "type": "String",
-          "info": "The method used to invoke the transcription_url. Defaults to POST."
+          "info": "The method used to invoke the transcription_url. Defaults to POST.",
+          "required": false
         },
         {
           "name": "callbackUrl",
           "type": "String",
-          "info": "The URL invoked by the API when the recording ends. The following parameters are sent to the callback_url: `api_id` - the same API ID returned by the call record API. `record_url` - the URL to access the recorded file. `call_uuid` - the call uuid of the recorded call. `recordingId` - the recording ID of the recorded call. `recordingDuration` - duration in seconds of the recording. `recordingDurationMs` - duration in milliseconds of the recording. `recordingStartMs` - when the recording started (epoch time UTC) in milliseconds. `recordingEndMs` - when the recording ended (epoch time UTC) in milliseconds."
+          "info": "The URL invoked by the API when the recording ends. The following parameters are sent to the callback_url: `api_id` - the same API ID returned by the call record API. `record_url` - the URL to access the recorded file. `call_uuid` - the call uuid of the recorded call. `recordingId` - the recording ID of the recorded call. `recordingDuration` - duration in seconds of the recording. `recordingDurationMs` - duration in milliseconds of the recording. `recordingStartMs` - when the recording started (epoch time UTC) in milliseconds. `recordingEndMs` - when the recording ended (epoch time UTC) in milliseconds.",
+          "required": false
         },
         {
           "name": "callbackMethod",
           "type": "String",
-          "info": "The method which is used to invoke the callback_url URL. Defaults to POST."
+          "info": "The method which is used to invoke the callback_url URL. Defaults to POST.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1004,27 +1177,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "callUuid",
           "type": "String",
-          "info": "Required: Valid callUuid."
+          "info": "Valid callUuid.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1035,52 +1213,62 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "callUuid",
           "type": "String",
-          "info": "Required: Valid callUuid."
+          "info": "Valid callUuid.",
+          "required": true
         },
         {
           "name": "urls",
           "type": "String",
-          "info": "A single URL or a list of comma separated URLs linking to an mp3 or wav file."
+          "info": "A single URL or a list of comma separated URLs linking to an mp3 or wav file.",
+          "required": false
         },
         {
           "name": "length",
           "type": "String",
-          "info": "Maximum length in seconds that the audio should be played."
+          "info": "Maximum length in seconds that the audio should be played.",
+          "required": false
         },
         {
           "name": "legs",
           "type": "String",
-          "info": "The leg on which the music will be played, can be aleg (i.e., A-leg is the first leg of the call or current call), bleg (i.e., B-leg is the second leg of the call),or both (i.e., both legs of the call)."
+          "info": "The leg on which the music will be played, can be aleg (i.e., A-leg is the first leg of the call or current call), bleg (i.e., B-leg is the second leg of the call),or both (i.e., both legs of the call).",
+          "required": false
         },
         {
           "name": "loop",
           "type": "String",
-          "info": "If set to true, the audio file will play indefinitely."
+          "info": "If set to true, the audio file will play indefinitely.",
+          "required": false
         },
         {
           "name": "mix",
           "type": "String",
-          "info": "If set to true, sounds are mixed with current audio flow."
+          "info": "If set to true, sounds are mixed with current audio flow.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1091,27 +1279,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "callUuid",
           "type": "String",
-          "info": "Required: Valid callUuid"
+          "info": "Valid callUuid",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1122,57 +1315,68 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "callUuid",
           "type": "String",
-          "info": "Required: Valid callUuid."
+          "info": "Valid callUuid.",
+          "required": true
         },
         {
           "name": "text",
           "type": "String",
-          "info": "Required: The text to be played."
+          "info": "The text to be played.",
+          "required": true
         },
         {
           "name": "voice",
           "type": "String",
-          "info": "The voice to be used, can be MAN, WOMAN."
+          "info": "The voice to be used, can be MAN, WOMAN.",
+          "required": false
         },
         {
           "name": "language",
           "type": "String",
-          "info": "The language to be used, see Supported voices and languages below."
+          "info": "The language to be used, see Supported voices and languages below.",
+          "required": false
         },
         {
           "name": "legs",
           "type": "String",
-          "info": "The leg on which the text has to be played, can be aleg (i.e., A-leg is the first leg of the call or current call), bleg (i.e., B-leg is the second leg of the call),or both (i.e., both legs of the call)."
+          "info": "The leg on which the text has to be played, can be aleg (i.e., A-leg is the first leg of the call or current call), bleg (i.e., B-leg is the second leg of the call),or both (i.e., both legs of the call).",
+          "required": false
         },
         {
           "name": "loop",
           "type": "String",
-          "info": "If set to true, the text will play indefinitely. "
+          "info": "If set to true, the text will play indefinitely. ",
+          "required": false
         },
         {
           "name": "mix",
           "type": "String",
-          "info": "If set to true, the text audio will be mixed in with current call audio. "
+          "info": "If set to true, the text audio will be mixed in with current call audio. ",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1183,27 +1387,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "callUuid",
           "type": "String",
-          "info": "Required: Valid callUuid."
+          "info": "Valid callUuid.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1214,37 +1423,44 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "callUuid",
           "type": "String",
-          "info": "Required: Valid callUuid."
+          "info": "Valid callUuid.",
+          "required": true
         },
         {
           "name": "digits",
           "type": "String",
-          "info": "Required: Digits to be sent."
+          "info": "Digits to be sent.",
+          "required": true
         },
         {
           "name": "leg",
           "type": "String",
-          "info": "The leg to be used, can be aleg (the current call) or bleg (the other party in a Dial). Defaults to aleg."
+          "info": "The leg to be used, can be aleg (the current call) or bleg (the other party in a Dial). Defaults to aleg.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1255,27 +1471,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "requestUuid",
           "type": "String",
-          "info": "Required: valid requestUuid."
+          "info": "valid requestUuid.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1286,22 +1507,26 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1312,27 +1537,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "conferenceName",
           "type": "String",
-          "info": "Required: Valid conferenceName."
+          "info": "Valid conferenceName.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1343,22 +1573,26 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1369,27 +1603,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "conferenceName",
           "type": "String",
-          "info": "Required: Valid conferenceName."
+          "info": "Valid conferenceName.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1400,57 +1639,68 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "conferenceName",
           "type": "String",
-          "info": "Required: Valid conferenceName."
+          "info": "Valid conferenceName.",
+          "required": true
         },
         {
           "name": "fileFormat",
           "type": "String",
-          "info": "The file format of the record can be of mp3 or wav format. Defaults to mp3 format."
+          "info": "The file format of the record can be of mp3 or wav format. Defaults to mp3 format.",
+          "required": false
         },
         {
           "name": "transcriptionType",
           "type": "String",
-          "info": "The type of transcription required. The following values are allowed: auto - This is the default value. Transcription is completely automated; turnaround time is about 5 minutes. hybrid - Transcription is a combination of automated and human verification processes; turnaround time is about 10-15 minutes."
+          "info": "The type of transcription required. The following values are allowed: auto - This is the default value. Transcription is completely automated; turnaround time is about 5 minutes. hybrid - Transcription is a combination of automated and human verification processes; turnaround time is about 10-15 minutes.",
+          "required": false
         },
         {
           "name": "transcriptionUrl",
           "type": "String",
-          "info": "The URL where the transcription is available."
+          "info": "The URL where the transcription is available.",
+          "required": false
         },
         {
           "name": "transcriptionMethod",
           "type": "String",
-          "info": "The method used to invoke the transcription_url. Defaults to POST."
+          "info": "The method used to invoke the transcription_url. Defaults to POST.",
+          "required": false
         },
         {
           "name": "callbackUrl",
           "type": "String",
-          "info": "The URL invoked by the API when the recording ends. The following parameters are sent to the callback_url: `api_id` - the same API ID returned by the conference record API. `recordUrl` - the URL to access the recorded file. `recordingId` - recording ID of the recorded file. `conferenceName` - the conference name recorded. `recordingDuration` - duration in seconds of the recording. `recordingDurationMs` - duration in milliseconds of the recording. `recordingStartMs` - when the recording started (epoch time UTC) in milliseconds. `recordingEndMs` - when the recording ended (epoch time UTC) in milliseconds."
+          "info": "The URL invoked by the API when the recording ends. The following parameters are sent to the callback_url: `api_id` - the same API ID returned by the conference record API. `recordUrl` - the URL to access the recorded file. `recordingId` - recording ID of the recorded file. `conferenceName` - the conference name recorded. `recordingDuration` - duration in seconds of the recording. `recordingDurationMs` - duration in milliseconds of the recording. `recordingStartMs` - when the recording started (epoch time UTC) in milliseconds. `recordingEndMs` - when the recording ended (epoch time UTC) in milliseconds.",
+          "required": false
         },
         {
           "name": "callbackMethod",
           "type": "String",
-          "info": "The method which is used to invoke the callback_url URL. Defaults to POST."
+          "info": "The method which is used to invoke the callback_url URL. Defaults to POST.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1461,27 +1711,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "conferenceName",
           "type": "String",
-          "info": "Required: Valid conferenceName."
+          "info": "Valid conferenceName.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1492,32 +1747,38 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "conferenceName",
           "type": "String",
-          "info": "Required: Valid conferenceName."
+          "info": "Valid conferenceName.",
+          "required": true
         },
         {
           "name": "memberId",
           "type": "String",
-          "info": "Required: Valid memberId."
+          "info": "Valid memberId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1528,32 +1789,38 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "conferenceName",
           "type": "String",
-          "info": "Required: Valid conferenceName."
+          "info": "Valid conferenceName.",
+          "required": true
         },
         {
           "name": "memberId",
           "type": "String",
-          "info": "Required: Valid memberId."
+          "info": "Valid memberId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1564,32 +1831,38 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "conferenceName",
           "type": "String",
-          "info": "Required: Valid conferenceName."
+          "info": "Valid conferenceName.",
+          "required": true
         },
         {
           "name": "memberId",
           "type": "String",
-          "info": "Required: Valid memberId."
+          "info": "Valid memberId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1600,32 +1873,38 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "conferenceName",
           "type": "String",
-          "info": "Required: Valid conferenceName."
+          "info": "Valid conferenceName.",
+          "required": true
         },
         {
           "name": "memberId",
           "type": "String",
-          "info": "Required: Valid memberId."
+          "info": "Valid memberId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1636,37 +1915,44 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "conferenceName",
           "type": "String",
-          "info": "Required: Valid conferenceName."
+          "info": "Valid conferenceName.",
+          "required": true
         },
         {
           "name": "memberId",
           "type": "String",
-          "info": "Required: Valid memberId."
+          "info": "Valid memberId.",
+          "required": true
         },
         {
           "name": "url",
           "type": "String",
-          "info": "Required: URL of the sound file to be played."
+          "info": "URL of the sound file to be played.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1677,32 +1963,38 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "conferenceName",
           "type": "String",
-          "info": "Required: Valid conferenceName."
+          "info": "Valid conferenceName.",
+          "required": true
         },
         {
           "name": "memberId",
           "type": "String",
-          "info": "Required: Valid memberId."
+          "info": "Valid memberId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1713,47 +2005,56 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "conferenceName",
           "type": "String",
-          "info": "Required: Valid conferenceName."
+          "info": "Valid conferenceName.",
+          "required": true
         },
         {
           "name": "memberId",
           "type": "String",
-          "info": "Required: Valid memberId."
+          "info": "Valid memberId.",
+          "required": true
         },
         {
           "name": "text",
           "type": "String",
-          "info": "Required: The text that the member must hear."
+          "info": "The text that the member must hear.",
+          "required": true
         },
         {
           "name": "voice",
           "type": "String",
-          "info": "The voice to be used. Can be MAN or WOMAN. Defaults to WOMAN."
+          "info": "The voice to be used. Can be MAN or WOMAN. Defaults to WOMAN.",
+          "required": false
         },
         {
           "name": "language",
           "type": "String",
-          "info": "The language to be used, see Supported voices and languages below. Defaults to en-US."
+          "info": "The language to be used, see Supported voices and languages below. Defaults to en-US.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1764,32 +2065,38 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "conferenceName",
           "type": "String",
-          "info": "Required: Valid conferenceName."
+          "info": "Valid conferenceName.",
+          "required": true
         },
         {
           "name": "memberId",
           "type": "String",
-          "info": "Required: Valid memberId."
+          "info": "Valid memberId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1800,32 +2107,38 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "conferenceName",
           "type": "String",
-          "info": "Required: Valid conferenceName."
+          "info": "Valid conferenceName.",
+          "required": true
         },
         {
           "name": "memberId",
           "type": "String",
-          "info": "Required: Valid memberId."
+          "info": "Valid memberId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1836,32 +2149,38 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "conferenceName",
           "type": "String",
-          "info": "Required: Valid conferenceName."
+          "info": "Valid conferenceName.",
+          "required": true
         },
         {
           "name": "memberId",
           "type": "String",
-          "info": "Required: Valid memberId."
+          "info": "Valid memberId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1872,42 +2191,50 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "username",
           "type": "String",
-          "info": "Required: The username for the endpoint to be created."
+          "info": "The username for the endpoint to be created.",
+          "required": true
         },
         {
           "name": "password",
           "type": "String",
-          "info": "Required: The password for your endpoint username."
+          "info": "The password for your endpoint username.",
+          "required": true
         },
         {
           "name": "alias",
           "type": "String",
-          "info": "Required: Alias for this endpoint."
+          "info": "Alias for this endpoint.",
+          "required": true
         },
         {
           "name": "appId",
           "type": "String",
-          "info": "The app_id of the application that is to be attached to this endpoint."
+          "info": "The app_id of the application that is to be attached to this endpoint.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1918,27 +2245,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "endpointId",
           "type": "String",
-          "info": "Required: Valid endpointId."
+          "info": "Valid endpointId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1949,22 +2281,26 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -1975,42 +2311,50 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "endpointId",
           "type": "credentials",
-          "info": "Required: Valid endpointId."
+          "info": "Valid endpointId.",
+          "required": true
         },
         {
           "name": "password",
           "type": "String",
-          "info": "Required: The password for your endpoint username."
+          "info": "The password for your endpoint username.",
+          "required": true
         },
         {
           "name": "alias",
           "type": "String",
-          "info": "Required: Alias for this endpoint."
+          "info": "Alias for this endpoint.",
+          "required": true
         },
         {
           "name": "appId",
           "type": "String",
-          "info": "The app_id of the application that is to be attached to this endpoint."
+          "info": "The app_id of the application that is to be attached to this endpoint.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2021,27 +2365,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "endpointId",
           "type": "credentials",
-          "info": "Required: Valid endpointId."
+          "info": "Valid endpointId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2052,57 +2401,68 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "src",
           "type": "String",
-          "info": "Required: The phone number that will be shown as the sender ID. Be sure that all phone numbers include country code, area code, and phone number without spaces or dashes (e.g., 14153336666). Note that a Plivo phone number is required for sending messages to the U.S. or Canada. You can buya Plivo number from the Buy Numbers tab on your Plivo account dashboard."
+          "info": "The phone number that will be shown as the sender ID. Be sure that all phone numbers include country code, area code, and phone number without spaces or dashes (e.g., 14153336666). Note that a Plivo phone number is required for sending messages to the U.S. or Canada. You can buya Plivo number from the Buy Numbers tab on your Plivo account dashboard.",
+          "required": true
         },
         {
           "name": "destination",
           "type": "String",
-          "info": "The number to which the message will be sent. Be sure that all phone numbers include country code, area code, and phone number withoutspaces or dashes (e.g., 14153336666). To send messages to multiple numbers, separate your destination phone numbers with the delimiter '<' (e.g., 14156667777<14157778888<14158889999)."
+          "info": "The number to which the message will be sent. Be sure that all phone numbers include country code, area code, and phone number withoutspaces or dashes (e.g., 14153336666). To send messages to multiple numbers, separate your destination phone numbers with the delimiter '<' (e.g., 14156667777<14157778888<14158889999).",
+          "required": false
         },
         {
           "name": "text",
           "type": "String",
-          "info": "Required: The text message that will be sent. The API will encode the text in Unicode UTF-8 and accepts up to 1000 bytes of UTF-8 encoded text in a single API request. The text will be automatically split into multiple messages and sent separately if the message exceeds the size limit. See notes below for more details."
+          "info": "The text message that will be sent. The API will encode the text in Unicode UTF-8 and accepts up to 1000 bytes of UTF-8 encoded text in a single API request. The text will be automatically split into multiple messages and sent separately if the message exceeds the size limit. See notes below for more details.",
+          "required": true
         },
         {
           "name": "type",
           "type": "String",
-          "info": "The type of message. Should be `sms` for a text message. Defaults to `sms`."
+          "info": "The type of message. Should be `sms` for a text message. Defaults to `sms`.",
+          "required": false
         },
         {
           "name": "url",
           "type": "String",
-          "info": "The URL to which with the status of the message is sent. \nThe following parameters are sent to the URL: \n`To` - Phone number of the recipient \n`From` - Phone number of the sender \n`Status` - Status of the message including 'queued', 'sent', 'failed', 'delivered', \n'undelivered' or 'rejected' \n`MessageUUID` - The unique ID for the message \n`ParentMessageUUID` - ID of the parent message (see notes about long SMS below) \n`PartInfo` - Specifies the sequence of the message (useful for long messages split into \nmultiple text messages; see notes about long SMS below) \n`TotalRate` - Total rate per sms \n`TotalAmount` - Total cost of sending the sms (TotalRate * Units) \n`Units` - Number of units into which a long SMS was split \n `MCC` - Mobile Country Code (see here for more details) \n`MNC` - Mobile Network Code (see here for more details) \n`ErrorCode` - Delivery Response code returned by the carrier attempting the delivery.\n See Supported error codes below."
+          "info": "The URL to which with the status of the message is sent. \nThe following parameters are sent to the URL: \n`To` - Phone number of the recipient \n`From` - Phone number of the sender \n`Status` - Status of the message including 'queued', 'sent', 'failed', 'delivered', \n'undelivered' or 'rejected' \n`MessageUUID` - The unique ID for the message \n`ParentMessageUUID` - ID of the parent message (see notes about long SMS below) \n`PartInfo` - Specifies the sequence of the message (useful for long messages split into \nmultiple text messages; see notes about long SMS below) \n`TotalRate` - Total rate per sms \n`TotalAmount` - Total cost of sending the sms (TotalRate * Units) \n`Units` - Number of units into which a long SMS was split \n `MCC` - Mobile Country Code (see here for more details) \n`MNC` - Mobile Network Code (see here for more details) \n`ErrorCode` - Delivery Response code returned by the carrier attempting the delivery.\n See Supported error codes below.",
+          "required": false
         },
         {
           "name": "method",
           "type": "String",
-          "info": "The method used to call the url. Defaults nodeto POST."
+          "info": "The method used to call the url. Defaults nodeto POST.",
+          "required": false
         },
         {
           "name": "log",
           "type": "String",
-          "info": "If set to false, the content of this message will not be logged on the Plivoinfrastructure and the dst value will be masked (e.g., 141XXXXX528). Default is set to true."
+          "info": "If set to false, the content of this message will not be logged on the Plivoinfrastructure and the dst value will be masked (e.g., 141XXXXX528). Default is set to true.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2113,52 +2473,62 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "subaccount",
           "type": "String",
-          "info": "The id of the subaccount, if message details of the subaccount is needed."
+          "info": "The id of the subaccount, if message details of the subaccount is needed.",
+          "required": false
         },
         {
           "name": "messageDirection",
           "type": "String",
-          "info": "Filter the results by message direction. The valid inputs are inbound and outbound."
+          "info": "Filter the results by message direction. The valid inputs are inbound and outbound.",
+          "required": false
         },
         {
           "name": "messageTime",
           "type": "String",
-          "info": "Filter out messages according to the time of completion. The filter can be used in the following five forms: messageState (optional),"
+          "info": "Filter out messages according to the time of completion. The filter can be used in the following five forms: messageState (optional),",
+          "required": false
         },
         {
           "name": "limit",
           "type": "String",
-          "info": "Used to display the number of results per page. The maximum number of results that can be fetched is 20."
+          "info": "Used to display the number of results per page. The maximum number of results that can be fetched is 20.",
+          "required": false
         },
         {
           "name": "offset",
           "type": "String",
-          "info": "Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results."
+          "info": "Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results.",
+          "required": false
         },
         {
           "name": "errorCode",
           "type": "String",
-          "info": "Delivery Response code returned by the carrier attempting the delivery. See Supported error codes below."
+          "info": "Delivery Response code returned by the carrier attempting the delivery. See Supported error codes below.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2169,27 +2539,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "messageUuid",
           "type": "String",
-          "info": "Required: Valid messageUuid."
+          "info": "Valid messageUuid.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2200,57 +2575,68 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "type",
           "type": "String",
-          "info": "The type of number you are filtering. You can filter by local and tollfree numbers. Defaults to a local number."
+          "info": "The type of number you are filtering. You can filter by local and tollfree numbers. Defaults to a local number.",
+          "required": false
         },
         {
           "name": "numberStartsWith",
           "type": "String",
-          "info": "Used to specify the beginning of the number. For example, if the number '24' is specified, the API will fetch only those numbers beginning with '24'."
+          "info": "Used to specify the beginning of the number. For example, if the number '24' is specified, the API will fetch only those numbers beginning with '24'.",
+          "required": false
         },
         {
           "name": "subaccount",
           "type": "String",
-          "info": "Requires the auth_id of the subaccount as input. If this parameter is included in the request, all numbers of the particular subaccount are displayed."
+          "info": "Requires the auth_id of the subaccount as input. If this parameter is included in the request, all numbers of the particular subaccount are displayed.",
+          "required": false
         },
         {
           "name": "alias",
           "type": "String",
-          "info": "This is a name given to the number. The API will fetch only those numbers with the alias specified."
+          "info": "This is a name given to the number. The API will fetch only those numbers with the alias specified.",
+          "required": false
         },
         {
           "name": "services",
           "type": "String",
-          "info": "Filters out phone numbers according to the services you want from that number. The following values are valid: voice - Returns a list of numbers that provide 'voice' services. Additionally, if the numbers offer both 'voice' and 'sms', they are also listed. Note - This option does not exclusively list those services that provide both voice and sms . voice,sms - Returns a list of numbers that provide both 'voice' and 'sms' services. sms - Returns a list of numbers that provide only 'sms' services."
+          "info": "Filters out phone numbers according to the services you want from that number. The following values are valid: voice - Returns a list of numbers that provide 'voice' services. Additionally, if the numbers offer both 'voice' and 'sms', they are also listed. Note - This option does not exclusively list those services that provide both voice and sms . voice,sms - Returns a list of numbers that provide both 'voice' and 'sms' services. sms - Returns a list of numbers that provide only 'sms' services.",
+          "required": false
         },
         {
           "name": "limit",
           "type": "String",
-          "info": "Used to display the number of results per page. The maximum number of results that can be fetched is 20."
+          "info": "Used to display the number of results per page. The maximum number of results that can be fetched is 20.",
+          "required": false
         },
         {
           "name": "offset",
           "type": "String",
-          "info": "Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results."
+          "info": "Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2261,27 +2647,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "number",
           "type": "String",
-          "info": "Required: number."
+          "info": "number.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2292,52 +2683,62 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "numbers",
           "type": "String",
-          "info": "Required: A comma separated list of numbers that need to be added for the carrier. Make sure that you configure the numbers to point to the sip server @sbc.plivo.com. Eg: If the number you own from your carrier is 18554675486 then the sip address it needs to point to is 18554675486@sbc.plivo.com"
+          "info": "A comma separated list of numbers that need to be added for the carrier. Make sure that you configure the numbers to point to the sip server @sbc.plivo.com. Eg: If the number you own from your carrier is 18554675486 then the sip address it needs to point to is 18554675486@sbc.plivo.com",
+          "required": true
         },
         {
           "name": "carrier",
           "type": "String",
-          "info": "Required: The carrier_id of the IncomingCarrier that the number is associated with. For more information, check our IncomingCarrier API"
+          "info": "The carrier_id of the IncomingCarrier that the number is associated with. For more information, check our IncomingCarrier API",
+          "required": true
         },
         {
           "name": "region",
           "type": "String",
-          "info": "Required: This is the region that is associated with the Number. You can use it to organize numbers based on the area they are from."
+          "info": "This is the region that is associated with the Number. You can use it to organize numbers based on the area they are from.",
+          "required": true
         },
         {
           "name": "numberType",
           "type": "String",
-          "info": "This field does not impact the way Plivo uses this number. It is primarily adding more information about your number. You may use this field tocategorize between local and tollfree numbers. Default is local."
+          "info": "This field does not impact the way Plivo uses this number. It is primarily adding more information about your number. You may use this field tocategorize between local and tollfree numbers. Default is local.",
+          "required": false
         },
         {
           "name": "appId",
           "type": "String",
-          "info": "The application id of the application that is to be linked."
+          "info": "The application id of the application that is to be linked.",
+          "required": false
         },
         {
           "name": "subaccount",
           "type": "String",
-          "info": "The auth_id of the subaccount to which this number should be added. This can only be performed by a main account holder."
+          "info": "The auth_id of the subaccount to which this number should be added. This can only be performed by a main account holder.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2348,42 +2749,50 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "number",
           "type": "String",
-          "info": "Required: Valid number."
+          "info": "Valid number.",
+          "required": true
         },
         {
           "name": "appId",
           "type": "String",
-          "info": "The application id of the application that is to be linked. If this is set to null, then any existing application is unlinked from the number."
+          "info": "The application id of the application that is to be linked. If this is set to null, then any existing application is unlinked from the number.",
+          "required": false
         },
         {
           "name": "subaccount",
           "type": "String",
-          "info": "The auth_id of the subaccount to which this number should be added. This can only be performed by a main account holder."
+          "info": "The auth_id of the subaccount to which this number should be added. This can only be performed by a main account holder.",
+          "required": false
         },
         {
           "name": "alias",
           "type": "String",
-          "info": "The textual name given to the number."
+          "info": "The textual name given to the number.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2394,27 +2803,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "number",
           "type": "String",
-          "info": "Required: Valid number."
+          "info": "Valid number.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2425,67 +2839,80 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "countryIso",
           "type": "String",
-          "info": "Required: The ISO code A2 of the country ( BE for Belgium, DE for Germany, GB for United Kingdom, US for United States etc ). See the Wikipedia site for a list of ISOs for different countries."
+          "info": "The ISO code A2 of the country ( BE for Belgium, DE for Germany, GB for United Kingdom, US for United States etc ). See the Wikipedia site for a list of ISOs for different countries.",
+          "required": true
         },
         {
           "name": "type",
           "type": "String",
-          "info": "The type of number you are looking for. The possible number types arefixed, mobile and tollfree. Defaults to any if this field is not specified. type also accepts the value any, which will search for all 3 number types."
+          "info": "The type of number you are looking for. The possible number types arefixed, mobile and tollfree. Defaults to any if this field is not specified. type also accepts the value any, which will search for all 3 number types.",
+          "required": false
         },
         {
           "name": "pattern",
           "type": "String",
-          "info": "Represents the pattern of the number to be searched. Adding a pattern will search for numbers which start with the country code + pattern. For eg. a pattern of 415 and a country_iso: US will search for numbers starting with 1415."
+          "info": "Represents the pattern of the number to be searched. Adding a pattern will search for numbers which start with the country code + pattern. For eg. a pattern of 415 and a country_iso: US will search for numbers starting with 1415.",
+          "required": false
         },
         {
           "name": "region",
           "type": "String",
-          "info": "This filter is only applicable when the type is fixed. If the type is not provided, it is assumed to be fixed. Region based filtering can be performed with the following terms: Exact names of the region: You could use region=Frankfurt if you were looking for a number in Frankfurt. Performed if the search term is three or more characters in length."
+          "info": "This filter is only applicable when the type is fixed. If the type is not provided, it is assumed to be fixed. Region based filtering can be performed with the following terms: Exact names of the region: You could use region=Frankfurt if you were looking for a number in Frankfurt. Performed if the search term is three or more characters in length.",
+          "required": false
         },
         {
           "name": "services",
           "type": "String",
-          "info": "Filters out phone numbers according to the services you want from that number. The following values are valid: voice - If this option is selected, it ensures that the results have voice enabled numbers. These numbers may or may not be SMS enabled. voice,sms - If this option is selected, it ensures that the results have both voice and sms enabled on the same number. sms - If this option is selected, it ensures that the results have sms enabled numbers. These numbers may or may not be voice enabled. By default, numbers that have either voice or sms or both enabled are returned."
+          "info": "Filters out phone numbers according to the services you want from that number. The following values are valid: voice - If this option is selected, it ensures that the results have voice enabled numbers. These numbers may or may not be SMS enabled. voice,sms - If this option is selected, it ensures that the results have both voice and sms enabled on the same number. sms - If this option is selected, it ensures that the results have sms enabled numbers. These numbers may or may not be voice enabled. By default, numbers that have either voice or sms or both enabled are returned.",
+          "required": false
         },
         {
           "name": "lata",
           "type": "String",
-          "info": "Numbers can be searched using Local Access and Transport Area. This filter is applicable only for country_iso US and CA."
+          "info": "Numbers can be searched using Local Access and Transport Area. This filter is applicable only for country_iso US and CA.",
+          "required": false
         },
         {
           "name": "rateCenter",
           "type": "String",
-          "info": "Numbers can be searched using Rate Center. This filter is application only for country_iso US and CA."
+          "info": "Numbers can be searched using Rate Center. This filter is application only for country_iso US and CA.",
+          "required": false
         },
         {
           "name": "limit",
           "type": "String",
-          "info": "Used to display the number of results per page. The maximum number of results that can be fetched is 20."
+          "info": "Used to display the number of results per page. The maximum number of results that can be fetched is 20.",
+          "required": false
         },
         {
           "name": "offset",
           "type": "String",
-          "info": "Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results."
+          "info": "Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2496,32 +2923,38 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "number",
           "type": "String",
-          "info": "Required: Valid number."
+          "info": "Valid number.",
+          "required": true
         },
         {
           "name": "appId",
           "type": "String",
-          "info": "The ID of the application that you want assigned to the Number. If not specified, then it is assigned to the default application of the Account."
+          "info": "The ID of the application that you want assigned to the Number. If not specified, then it is assigned to the default application of the Account.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2532,27 +2965,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "countryIso",
           "type": "String",
-          "info": "Required: The 2 digit country ISO code. eg. US, GB, QA."
+          "info": "The 2 digit country ISO code. eg. US, GB, QA.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2563,47 +3001,56 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "addTime",
           "type": "String",
-          "info": "Used to filter out recordings according to the time they were added"
+          "info": "Used to filter out recordings according to the time they were added",
+          "required": false
         },
         {
           "name": "subaccount",
           "type": "String",
-          "info": "Auth id of the subaccount. Lists only those recordings of the main accounts which are tied to the specified subaccount."
+          "info": "Auth id of the subaccount. Lists only those recordings of the main accounts which are tied to the specified subaccount.",
+          "required": false
         },
         {
           "name": "callUuid",
           "type": "String",
-          "info": "Used to filter recordings for a specific call."
+          "info": "Used to filter recordings for a specific call.",
+          "required": false
         },
         {
           "name": "limit",
           "type": "String",
-          "info": "Used to display the number of results per page. The maximum number of results that can be fetched is 20."
+          "info": "Used to display the number of results per page. The maximum number of results that can be fetched is 20.",
+          "required": false
         },
         {
           "name": "offset",
           "type": "String",
-          "info": "Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results."
+          "info": "Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2614,27 +3061,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "recordingId",
           "type": "String",
-          "info": "Required: Valid recordingId."
+          "info": "Valid recordingId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2645,27 +3097,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "recordingId",
           "type": "String",
-          "info": "Required: Valid recordingId."
+          "info": "Valid recordingId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2676,37 +3133,44 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "name",
           "type": "String",
-          "info": "Allows filtering by name. The filter term can be one of the following:The exact name of the Carrier Phrase contained within the name the carrier (includes the 'starts with' filter)."
+          "info": "Allows filtering by name. The filter term can be one of the following:The exact name of the Carrier Phrase contained within the name the carrier (includes the 'starts with' filter).",
+          "required": false
         },
         {
           "name": "limit",
           "type": "String",
-          "info": "Used to display the number of results per page. The maximum number of results that can be fetched is 20."
+          "info": "Used to display the number of results per page. The maximum number of results that can be fetched is 20.",
+          "required": false
         },
         {
           "name": "offset",
           "type": "String",
-          "info": "Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results."
+          "info": "Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2717,27 +3181,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "carrierId",
           "type": "String",
-          "info": "Required: Valid carrierId."
+          "info": "Valid carrierId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2748,32 +3217,38 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "name",
           "type": "String",
-          "info": "Required: The name of the carrier being added. It is just a representation and the name can be chosen at will."
+          "info": "The name of the carrier being added. It is just a representation and the name can be chosen at will.",
+          "required": true
         },
         {
           "name": "ipSet",
           "type": "String",
-          "info": "Required: Comma separated list of ip addresses from which calls belonging to the carrier will reach Plivo. This list will be used by Plivo to allow incoming call traffic into Plivo's servers. If calls come from an IP outside of this list, Plivo will not accept the call."
+          "info": "Comma separated list of ip addresses from which calls belonging to the carrier will reach Plivo. This list will be used by Plivo to allow incoming call traffic into Plivo's servers. If calls come from an IP outside of this list, Plivo will not accept the call.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2784,37 +3259,44 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "carrierId",
           "type": "String",
-          "info": "Required: Valid carrierId."
+          "info": "Valid carrierId.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "name",
           "type": "String",
-          "info": "The name of the carrier being added. It is just a representation and the name can be chosen at will."
+          "info": "The name of the carrier being added. It is just a representation and the name can be chosen at will.",
+          "required": false
         },
         {
           "name": "ipSet",
           "type": "String",
-          "info": "Comma separated list of ip addresses from which calls belonging to the carrier will reach Plivo. This list will be used by Plivo to allow incoming call traffic into Plivo's servers. If calls come from an IP outside of this list, Plivo will not accept the call."
+          "info": "Comma separated list of ip addresses from which calls belonging to the carrier will reach Plivo. This list will be used by Plivo to allow incoming call traffic into Plivo's servers. If calls come from an IP outside of this list, Plivo will not accept the call.",
+          "required": false
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     },
@@ -2825,27 +3307,32 @@
         {
           "name": "authToken",
           "type": "credentials",
-          "info": "Required: Valid authToken."
+          "info": "Valid authToken.",
+          "required": true
         },
         {
           "name": "authId",
           "type": "credentials",
-          "info": "Required: Valid authId."
+          "info": "Valid authId.",
+          "required": true
         },
         {
           "name": "carrierId",
           "type": "String",
-          "info": "Required: Valid carrierId."
+          "info": "Valid carrierId.",
+          "required": true
         }
       ],
       "callbacks": [
         {
           "name": "error",
-          "info": "Error"
+          "info": "Error",
+          "required": false
         },
         {
           "name": "success",
-          "info": "Success"
+          "info": "Success",
+          "required": false
         }
       ]
     }

@@ -6,78 +6,9 @@ Global SMS & Voice calls for businesses of all sizes
 ## How to get credentials: 
 1. Go to [Plivo dashboard](https://manage.plivo.com/dashboard/)
 2. Copy and save your `AUTH ID` and `AUTH TOKEN`.
-
-## TOC: 
-* [getAccountDetails](#getAccountDetails)
-* [updateAccount](#updateAccount)
-* [createSubaccount](#createSubaccount)
-* [updateSubaccount](#updateSubaccount)
-* [getSingleSubaccount](#getSingleSubaccount)
-* [getSubaccounts](#getSubaccounts)
-* [deleteSubaccount](#deleteSubaccount)
-* [createApplication](#createApplication)
-* [getApplications](#getApplications)
-* [getSingleApplication](#getSingleApplication)
-* [updateApplication](#updateApplication)
-* [deleteApplication](#deleteApplication)
-* [makeCall](#makeCall)
-* [getCallsDetails](#getCallsDetails)
-* [getSingleCallDetails](#getSingleCallDetails)
-* [getLiveCalls](#getLiveCalls)
-* [getSingleLiveCallDetails](#getSingleLiveCallDetails)
-* [hangupSingleCall](#hangupSingleCall)
-* [hangupCalls](#hangupCalls)
-* [transferCall](#transferCall)
-* [recordCall](#recordCall)
-* [stopCallRecording](#stopCallRecording)
-* [playMusicFile](#playMusicFile)
-* [stopPlayingMusicFile](#stopPlayingMusicFile)
-* [playText](#playText)
-* [stopPlayingText](#stopPlayingText)
-* [sendDigits](#sendDigits)
-* [hangupCallRequest](#hangupCallRequest)
-* [getConferences](#getConferences)
-* [getSingleConference](#getSingleConference)
-* [hangupConferences](#hangupConferences)
-* [hangupSingleConference](#hangupSingleConference)
-* [startRecordingConference](#startRecordingConference)
-* [stopRecordingConference](#stopRecordingConference)
-* [hangupMember](#hangupMember)
-* [kickMember](#kickMember)
-* [muteMember](#muteMember)
-* [unmuteMember](#unmuteMember)
-* [playSoundToMember](#playSoundToMember)
-* [stopPlayingSoundToMember](#stopPlayingSoundToMember)
-* [playTextToMember](#playTextToMember)
-* [stopPlayingTextToMember](#stopPlayingTextToMember)
-* [makeMemberDeaf](#makeMemberDeaf)
-* [enableHearingForMember](#enableHearingForMember)
-* [createEndpoint](#createEndpoint)
-* [getSingleEndpoint](#getSingleEndpoint)
-* [getEndpoints](#getEndpoints)
-* [updateEndpoint](#updateEndpoint)
-* [deleteEndpoint](#deleteEndpoint)
-* [sendMessage](#sendMessage)
-* [getMessages](#getMessages)
-* [getSingleMessage](#getSingleMessage)
-* [getRentedNumbers](#getRentedNumbers)
-* [getRentedNumber](#getRentedNumber)
-* [addOwnCarrierNumber](#addOwnCarrierNumber)
-* [updateNumber](#updateNumber)
-* [unrentNumber](#unrentNumber)
-* [searchNewNumbers](#searchNewNumbers)
-* [buyNumber](#buyNumber)
-* [getPricing](#getPricing)
-* [getRecordings](#getRecordings)
-* [getSingleRecording](#getSingleRecording)
-* [deleteRecording](#deleteRecording)
-* [listIncomingCarriers](#listIncomingCarriers)
-* [getSingleIncomingCarrier](#getSingleIncomingCarrier)
-* [addIncomingCarrier](#addIncomingCarrier)
-* [updateIncomingCarrier](#updateIncomingCarrier)
-* [removeIncomingCarrier](#removeIncomingCarrier)
  
-<a name="getAccountDetails"/>
+
+
 ## Plivo.getAccountDetails
 You can call this API to retrieve details like email address, cash credits, postal address, auto recharge settings, etc which is associated with your Plivo account. Returns an object representing your Plivo account.
 
@@ -86,7 +17,7 @@ You can call this API to retrieve details like email address, cash credits, post
 | authToken| credentials| Required: Valid authToken.
 | authId   | credentials| Required: Valid authId.
 
-<a name="updateAccount"/>
+
 ## Plivo.updateAccount
 If you would like to modify your account details, you could do so with this API. You can make changes to the name, city and the address fields.
 
@@ -98,7 +29,7 @@ If you would like to modify your account details, you could do so with this API.
 | city     | String     | City of the account holder.
 | address  | String     | Address of the account holder.
 
-<a name="createSubaccount"/>
+
 ## Plivo.createSubaccount
 A subaccount is an account that is owned by a parent account. Using a subaccount makes it easier to segment, manage, and keep track of the account usages of each user independently.
 
@@ -109,7 +40,7 @@ A subaccount is an account that is owned by a parent account. Using a subaccount
 | name     | String     | Required: Name of the subaccount
 | enabled  | String     | Specify if the subaccount should be enabled or not. Takes a value of True or False. Defaults to False
 
-<a name="updateSubaccount"/>
+
 ## Plivo.updateSubaccount
 If you would like to modify your subaccount, you could do so with this API. You can make changes to the name of the subaccount and specify whether to enable or disable it.
 
@@ -121,7 +52,7 @@ If you would like to modify your subaccount, you could do so with this API. You 
 | name     | String     | Required: Name of the subaccount
 | enabled  | String     | Specify if the subaccount should be enabled or not. Takes a value of True or False. Defaults to False
 
-<a name="getSingleSubaccount"/>
+
 ## Plivo.getSingleSubaccount
 You can call this API to retrieve details of a subaccount like auth_id, auth_token, etc. Returns an object representing your Plivo subaccount.
 
@@ -131,7 +62,7 @@ You can call this API to retrieve details of a subaccount like auth_id, auth_tok
 | authId   | credentials| Required: Valid authId.
 | subauthId| String     | Required: Valid subauthId.
 
-<a name="getSubaccounts"/>
+
 ## Plivo.getSubaccounts
 You can get details of all subaccounts associated with your main Plivo account. We return a list of all subaccounts.
 
@@ -142,7 +73,7 @@ You can get details of all subaccounts associated with your main Plivo account. 
 | offset   | credentials| Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results.
 | limit    | String     | Used to display the number of results per page. The maximum number of results that can be fetched is 20.
 
-<a name="deleteSubaccount"/>
+
 ## Plivo.deleteSubaccount
 You can delete a subaccount with this API. This API would delete the subaccount and associate all Number, Endpoints and Applications (which are linked to the subaccount) to the main Plivo account.
 
@@ -152,7 +83,7 @@ You can delete a subaccount with this API. This API would delete the subaccount 
 | authId   | credentials| Required: Valid authId.
 | subauthId| String     | Required: Valid subauthId.
 
-<a name="createApplication"/>
+
 ## Plivo.createApplication
 Create an application on Plivo by calling this API. Creating an application is usually the first step, after which you would attach this application either to a number or an endpoint.
 
@@ -173,7 +104,7 @@ Create an application on Plivo by calling this API. Creating an application is u
 | defaultEndpointApp| String     | Boolean parameter. If set to true, this parameter ensures that newly created endpoints, which don't have an app_id, point to this application.
 | subaccount        | String     | Id of the subaccount, in case only subaccount applications are needed.
 
-<a name="getApplications"/>
+
 ## Plivo.getApplications
 Theis API is used to get details of all the application that have been created under your Plivo account.
 
@@ -185,7 +116,7 @@ Theis API is used to get details of all the application that have been created u
 | limit     | String     | Used to display the number of results per page. The maximum number of results that can be fetched is 20.
 | offset    | String     | Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results.
 
-<a name="getSingleApplication"/>
+
 ## Plivo.getSingleApplication
 Get details of an particular application by passing the app_id. This API returns all the information linked with the application.
 
@@ -195,7 +126,7 @@ Get details of an particular application by passing the app_id. This API returns
 | authId   | credentials| Required: Valid authId.
 | appId    | String     | Required: Valid appId.
 
-<a name="updateApplication"/>
+
 ## Plivo.updateApplication
 Modify an application using this API.
 
@@ -216,7 +147,7 @@ Modify an application using this API.
 | defaultEndpointApp| String     | Boolean parameter. If set to true, this parameter ensures that newly created endpoints, which don't have an app_id, point to this application.
 | subaccount        | String     | Id of the subaccount, in case only subaccount applications are needed.
 
-<a name="deleteApplication"/>
+
 ## Plivo.deleteApplication
 This API would delete the Plivo application. Use this API wisely, once an application is deleted, it cannot be retrived.
 
@@ -226,7 +157,7 @@ This API would delete the Plivo application. Use this API wisely, once an applic
 | authId   | credentials| Required: Valid authId.
 | appId    | String     | Required: Valid appId.
 
-<a name="makeCall"/>
+
 ## Plivo.makeCall
 The following API enables you to make a single call or bulk outbound calls to real phone(s) or SIP endpoint(s).
 
@@ -258,7 +189,7 @@ The following API enables you to make a single call or bulk outbound calls to re
 | parentCallUuid        | String     | The call_uuid of the first leg in an ongoing conference call. It is recommended to use this parameter in scenarios where a member who is already present in the conference intends to add new members by initiating outbound API calls. This minimizes the delay in adding a new memeber to the conference.
 | errorIfParentNotFound | String     | if set to true and the parent_call_uuid cannot be found, the API request would return an error. If set to false, the outbound call API request will be executed even if the parent_call_uuid is not found. Defaults to false.
 
-<a name="getCallsDetails"/>
+
 ## Plivo.getCallsDetails
 The following API enables you to get information about all completed calls. The maximum number of results that can be fetched with a single API call is 20.
 
@@ -274,7 +205,7 @@ The following API enables you to get information about all completed calls. The 
 | limit        | String     | Used to display the number of results per page. The maximum number of results that can be fetched is 20.
 | offset       | String     | Denotes the number of value items by which the results should be offset. E.g., If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results.
 
-<a name="getSingleCallDetails"/>
+
 ## Plivo.getSingleCallDetails
 The following API enables you to get information about all completed calls. The maximum number of results that can be fetched with a single API call is 20.
 
@@ -284,7 +215,7 @@ The following API enables you to get information about all completed calls. The 
 | authId   | credentials| Required: Valid authId.
 | callUuid | String     | Required: Valid callUuid.
 
-<a name="getLiveCalls"/>
+
 ## Plivo.getLiveCalls
 Get all current active calls made from an account.
 
@@ -293,7 +224,7 @@ Get all current active calls made from an account.
 | authToken| credentials| Required: Valid authToken.
 | authId   | credentials| Required: Valid authId.
 
-<a name="getSingleLiveCallDetails"/>
+
 ## Plivo.getSingleLiveCallDetails
 Get information on an active call.
 
@@ -303,7 +234,7 @@ Get information on an active call.
 | authId   | credentials| Required: Valid authId.
 | callUuid | String     | Required: Valid callUuid.
 
-<a name="hangupSingleCall"/>
+
 ## Plivo.hangupSingleCall
 Hangup an incoming or outgoing call.
 
@@ -313,7 +244,7 @@ Hangup an incoming or outgoing call.
 | authId   | credentials| Required: Valid authId.
 | callUuid | String     | Required: Valid callUuid.
 
-<a name="hangupCalls"/>
+
 ## Plivo.hangupCalls
 Hangup all incoming or outgoing calls.
 
@@ -322,7 +253,7 @@ Hangup all incoming or outgoing calls.
 | authToken| credentials| Required: Valid authToken.
 | authId   | credentials| Required: Valid authId.
 
-<a name="transferCall"/>
+
 ## Plivo.transferCall
 This API enables an in-progress or active call to a different URL and fetch and execute XML from a new URL. If the call (the A leg) is in a Dial, you can also transfer the other party (the B leg) at the same time or only transfer the B leg to an URL. This is useful for many applications where you want to asynchronously change the behavior of a live call. For example, you can play music while the call is on hold, queue calls, transfer calls etc.
 
@@ -337,7 +268,7 @@ This API enables an in-progress or active call to a different URL and fetch and 
 | blegUrl   | String     | URL to transfer for bridged leg, if legs is bleg or both, then bleg_url has to be specified.
 | blegMethod| String     | HTTP method to invoke bleg_url. Defaults to POST.
 
-<a name="recordCall"/>
+
 ## Plivo.recordCall
 Record a Call
 
@@ -354,7 +285,7 @@ Record a Call
 | callbackUrl        | String     | The URL invoked by the API when the recording ends. The following parameters are sent to the callback_url: `api_id` - the same API ID returned by the call record API. `record_url` - the URL to access the recorded file. `call_uuid` - the call uuid of the recorded call. `recordingId` - the recording ID of the recorded call. `recordingDuration` - duration in seconds of the recording. `recordingDurationMs` - duration in milliseconds of the recording. `recordingStartMs` - when the recording started (epoch time UTC) in milliseconds. `recordingEndMs` - when the recording ended (epoch time UTC) in milliseconds.
 | callbackMethod     | String     | The method which is used to invoke the callback_url URL. Defaults to POST.
 
-<a name="stopCallRecording"/>
+
 ## Plivo.stopCallRecording
 Stop Recording a Call
 
@@ -364,7 +295,7 @@ Stop Recording a Call
 | authId   | credentials| Required: Valid authId.
 | callUuid | String     | Required: Valid callUuid.
 
-<a name="playMusicFile"/>
+
 ## Plivo.playMusicFile
 Play a Music File
 
@@ -379,7 +310,7 @@ Play a Music File
 | loop     | String     | If set to true, the audio file will play indefinitely.
 | mix      | String     | If set to true, sounds are mixed with current audio flow.
 
-<a name="stopPlayingMusicFile"/>
+
 ## Plivo.stopPlayingMusicFile
 Stop Playing a Music File
 
@@ -389,7 +320,7 @@ Stop Playing a Music File
 | authId   | credentials| Required: Valid authId.
 | callUuid | String     | Required: Valid callUuid
 
-<a name="playText"/>
+
 ## Plivo.playText
 The Speak API lets you play text asynchronously on a live call. These notifications can be useful when played during a live call, for example: ‘Please hold, while we transfer your call’ or ‘Your balance is running low…’, etc.
 
@@ -405,7 +336,7 @@ The Speak API lets you play text asynchronously on a live call. These notificati
 | loop     | String     | If set to true, the text will play indefinitely. 
 | mix      | String     | If set to true, the text audio will be mixed in with current call audio. 
 
-<a name="stopPlayingText"/>
+
 ## Plivo.stopPlayingText
 You can asynchronously stop the text which is being played by the Speak API.
 
@@ -415,7 +346,7 @@ You can asynchronously stop the text which is being played by the Speak API.
 | authId   | credentials| Required: Valid authId.
 | callUuid | String     | Required: Valid callUuid.
 
-<a name="sendDigits"/>
+
 ## Plivo.sendDigits
 Send digits on a call
 
@@ -427,7 +358,7 @@ Send digits on a call
 | digits   | String     | Required: Digits to be sent.
 | leg      | String     | The leg to be used, can be aleg (the current call) or bleg (the other party in a Dial). Defaults to aleg.
 
-<a name="hangupCallRequest"/>
+
 ## Plivo.hangupCallRequest
 Hangup a Call Request
 
@@ -437,7 +368,7 @@ Hangup a Call Request
 | authId     | credentials| Required: Valid authId.
 | requestUuid| String     | Required: valid requestUuid.
 
-<a name="getConferences"/>
+
 ## Plivo.getConferences
 Retrieves a list of all conferences which are active on your account. This API returns the names of all the ongoing conferences.
 
@@ -446,7 +377,7 @@ Retrieves a list of all conferences which are active on your account. This API r
 | authToken| credentials| Required: Valid authToken.
 | authId   | credentials| Required: Valid authId.
 
-<a name="getSingleConference"/>
+
 ## Plivo.getSingleConference
 Retrieves the details of a particular conference.
 
@@ -456,7 +387,7 @@ Retrieves the details of a particular conference.
 | authId        | credentials| Required: Valid authId.
 | conferenceName| String     | Required: Valid conferenceName.
 
-<a name="hangupConferences"/>
+
 ## Plivo.hangupConferences
 This API lets you hangup all ongoing conferences running on your account.
 
@@ -465,7 +396,7 @@ This API lets you hangup all ongoing conferences running on your account.
 | authToken| credentials| Required: Valid authToken.
 | authId   | credentials| Required: Valid authId.
 
-<a name="hangupSingleConference"/>
+
 ## Plivo.hangupSingleConference
 This API lets you hangup a particular conference by using the conference name.
 
@@ -475,7 +406,7 @@ This API lets you hangup a particular conference by using the conference name.
 | authId        | credentials| Required: Valid authId.
 | conferenceName| String     | Required: Valid conferenceName.
 
-<a name="startRecordingConference"/>
+
 ## Plivo.startRecordingConference
 This API lets you start recording a live conference.
 
@@ -491,7 +422,7 @@ This API lets you start recording a live conference.
 | callbackUrl        | String     | The URL invoked by the API when the recording ends. The following parameters are sent to the callback_url: `api_id` - the same API ID returned by the conference record API. `recordUrl` - the URL to access the recorded file. `recordingId` - recording ID of the recorded file. `conferenceName` - the conference name recorded. `recordingDuration` - duration in seconds of the recording. `recordingDurationMs` - duration in milliseconds of the recording. `recordingStartMs` - when the recording started (epoch time UTC) in milliseconds. `recordingEndMs` - when the recording ended (epoch time UTC) in milliseconds.
 | callbackMethod     | String     | The method which is used to invoke the callback_url URL. Defaults to POST.
 
-<a name="stopRecordingConference"/>
+
 ## Plivo.stopRecordingConference
 If the recording was initiated by the above Record API call, you could use this API call to stop recording the conference. This is useful when you don’t want to record certain parts of a conference which involves critical details being exchanged on the call.
 
@@ -501,7 +432,7 @@ If the recording was initiated by the above Record API call, you could use this 
 | authId        | credentials| Required: Valid authId.
 | conferenceName| String     | Required: Valid conferenceName.
 
-<a name="hangupMember"/>
+
 ## Plivo.hangupMember
 This API lets you kick a member out of a conference.
 
@@ -512,7 +443,7 @@ This API lets you kick a member out of a conference.
 | conferenceName| String     | Required: Valid conferenceName.
 | memberId      | String     | Required: Valid memberId.
 
-<a name="kickMember"/>
+
 ## Plivo.kickMember
 This API lets you kick a member out of a conference.
 
@@ -523,7 +454,7 @@ This API lets you kick a member out of a conference.
 | conferenceName| String     | Required: Valid conferenceName.
 | memberId      | String     | Required: Valid memberId.
 
-<a name="muteMember"/>
+
 ## Plivo.muteMember
 This API lets you mute members in a conference. When a member is muted, audio from their device will be muted and other members in the conference will not be able to hear the caller.
 
@@ -534,7 +465,7 @@ This API lets you mute members in a conference. When a member is muted, audio fr
 | conferenceName| String     | Required: Valid conferenceName.
 | memberId      | String     | Required: Valid memberId.
 
-<a name="unmuteMember"/>
+
 ## Plivo.unmuteMember
 This API lets you unmute members which have been muted by the Mute Member API.
 
@@ -545,7 +476,7 @@ This API lets you unmute members which have been muted by the Mute Member API.
 | conferenceName| String     | Required: Valid conferenceName.
 | memberId      | String     | Required: Valid memberId.
 
-<a name="playSoundToMember"/>
+
 ## Plivo.playSoundToMember
 This API lets you play a mp3 or a wav file to a member in the conference.
 
@@ -557,7 +488,7 @@ This API lets you play a mp3 or a wav file to a member in the conference.
 | memberId      | String     | Required: Valid memberId.
 | url           | String     | Required: URL of the sound file to be played.
 
-<a name="stopPlayingSoundToMember"/>
+
 ## Plivo.stopPlayingSoundToMember
 This API will stop the file which is being played to a member initiated by the Play API
 
@@ -568,7 +499,7 @@ This API will stop the file which is being played to a member initiated by the P
 | conferenceName| String     | Required: Valid conferenceName.
 | memberId      | String     | Required: Valid memberId.
 
-<a name="playTextToMember"/>
+
 ## Plivo.playTextToMember
 This API will play text to a member in a conference.
 
@@ -582,7 +513,7 @@ This API will play text to a member in a conference.
 | voice         | String     | The voice to be used. Can be MAN or WOMAN. Defaults to WOMAN.
 | language      | String     | The language to be used, see Supported voices and languages below. Defaults to en-US.
 
-<a name="stopPlayingTextToMember"/>
+
 ## Plivo.stopPlayingTextToMember
 This API will stop playing text to a member in a conference which was initiated by the Play Text API
 
@@ -593,7 +524,7 @@ This API will stop playing text to a member in a conference which was initiated 
 | conferenceName| String     | Required: Valid conferenceName.
 | memberId      | String     | Required: Valid memberId.
 
-<a name="makeMemberDeaf"/>
+
 ## Plivo.makeMemberDeaf
 This API lets you deaf a particular member. When this operation is made on a conference member, the member will not be able to hear any audio from the conference.
 
@@ -604,7 +535,7 @@ This API lets you deaf a particular member. When this operation is made on a con
 | conferenceName| String     | Required: Valid conferenceName.
 | memberId      | String     | Required: Valid memberId.
 
-<a name="enableHearingForMember"/>
+
 ## Plivo.enableHearingForMember
 This API lets you un-deaf a member in a conference.
 
@@ -615,7 +546,7 @@ This API lets you un-deaf a member in a conference.
 | conferenceName| String     | Required: Valid conferenceName.
 | memberId      | String     | Required: Valid memberId.
 
-<a name="createEndpoint"/>
+
 ## Plivo.createEndpoint
 This API lets you create a new endpoint on Plivo.
 
@@ -628,7 +559,7 @@ This API lets you create a new endpoint on Plivo.
 | alias    | String     | Required: Alias for this endpoint.
 | appId    | String     | The app_id of the application that is to be attached to this endpoint.
 
-<a name="getSingleEndpoint"/>
+
 ## Plivo.getSingleEndpoint
 This API lets you get details of a single endpoint on your account using the endpointId.
 
@@ -638,7 +569,7 @@ This API lets you get details of a single endpoint on your account using the end
 | authId    | credentials| Required: Valid authId.
 | endpointId| String     | Required: Valid endpointId.
 
-<a name="getEndpoints"/>
+
 ## Plivo.getEndpoints
 This API lets you get details of all endpoints. This is pretty useful in use-cases where you want statuses of your endpoints and whether they have been registered using a SIP client.
 
@@ -647,7 +578,7 @@ This API lets you get details of all endpoints. This is pretty useful in use-cas
 | authToken| credentials| Required: Valid authToken.
 | authId   | credentials| Required: Valid authId.
 
-<a name="updateEndpoint"/>
+
 ## Plivo.updateEndpoint
 This API lets you modify an endpoint’s password, alias or the application attached to it.
 
@@ -660,7 +591,7 @@ This API lets you modify an endpoint’s password, alias or the application atta
 | alias     | String     | Required: Alias for this endpoint.
 | appId     | String     | The app_id of the application that is to be attached to this endpoint.
 
-<a name="deleteEndpoint"/>
+
 ## Plivo.deleteEndpoint
 This API lets you delete an endpoint. This operation cannot be undone.
 
@@ -670,7 +601,7 @@ This API lets you delete an endpoint. This operation cannot be undone.
 | authId    | credentials| Required: Valid authId.
 | endpointId| credentials| Required: Valid endpointId.
 
-<a name="sendMessage"/>
+
 ## Plivo.sendMessage
 This API enables you to send messages via Plivo’s SMS service. The API supports Unicode UTF-8 encoded texts, so you can send messages in any language. The API also handles long SMS automatically by splitting it into standard SMS sized chunks and sending them. Delivery reports are automatically supported in networks where they are provided by the operator.
 
@@ -702,7 +633,7 @@ multiple text messages; see notes about long SMS below)
 | method   | String     | The method used to call the url. Defaults nodeto POST.
 | log      | String     | If set to false, the content of this message will not be logged on the Plivoinfrastructure and the dst value will be masked (e.g., 141XXXXX528). Default is set to true.
 
-<a name="getMessages"/>
+
 ## Plivo.getMessages
 Get Details of All Messages
 
@@ -717,7 +648,7 @@ Get Details of All Messages
 | offset          | String     | Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results.
 | errorCode       | String     | Delivery Response code returned by the carrier attempting the delivery. See Supported error codes below.
 
-<a name="getSingleMessage"/>
+
 ## Plivo.getSingleMessage
 Get Details of a Single Message
 
@@ -727,7 +658,7 @@ Get Details of a Single Message
 | authId     | credentials| Required: Valid authId.
 | messageUuid| String     | Required: Valid messageUuid.
 
-<a name="getRentedNumbers"/>
+
 ## Plivo.getRentedNumbers
 This API lets you list of numbers rented on Plivo and numbers added to your account.
 
@@ -743,7 +674,7 @@ This API lets you list of numbers rented on Plivo and numbers added to your acco
 | limit           | String     | Used to display the number of results per page. The maximum number of results that can be fetched is 20.
 | offset          | String     | Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results.
 
-<a name="getRentedNumber"/>
+
 ## Plivo.getRentedNumber
 This API lets you get details of a single number on your Plivo account.
 
@@ -753,7 +684,7 @@ This API lets you get details of a single number on your Plivo account.
 | authId   | credentials| Required: Valid authId.
 | number   | String     | Required: number.
 
-<a name="addOwnCarrierNumber"/>
+
 ## Plivo.addOwnCarrierNumber
 This API enables you to add a number of your own carrier.
 
@@ -768,7 +699,7 @@ This API enables you to add a number of your own carrier.
 | appId     | String     | The application id of the application that is to be linked.
 | subaccount| String     | The auth_id of the subaccount to which this number should be added. This can only be performed by a main account holder.
 
-<a name="updateNumber"/>
+
 ## Plivo.updateNumber
 This API enables you to change the application and subaccount associated with a number you rented.
 
@@ -781,7 +712,7 @@ This API enables you to change the application and subaccount associated with a 
 | subaccount| String     | The auth_id of the subaccount to which this number should be added. This can only be performed by a main account holder.
 | alias     | String     | The textual name given to the number.
 
-<a name="unrentNumber"/>
+
 ## Plivo.unrentNumber
 This API lets you unrent a number on Plivo. This operation cannot be undone.
 
@@ -791,7 +722,7 @@ This API lets you unrent a number on Plivo. This operation cannot be undone.
 | authId   | credentials| Required: Valid authId.
 | number   | String     | Required: Valid number.
 
-<a name="searchNewNumbers"/>
+
 ## Plivo.searchNewNumbers
 This API lets you search for fixed, mobile and tollfree numbers available on Plivo. Searches can be performed based on the country ISO, pattern, number type and region. We return a list of numbers which can then be bought.
 
@@ -809,7 +740,7 @@ This API lets you search for fixed, mobile and tollfree numbers available on Pli
 | limit     | String     | Used to display the number of results per page. The maximum number of results that can be fetched is 20.
 | offset    | String     | Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results.
 
-<a name="buyNumber"/>
+
 ## Plivo.buyNumber
 The number retrieved from the search above should be used as an input to buy the number.
 
@@ -820,7 +751,7 @@ The number retrieved from the search above should be used as an input to buy the
 | number   | String     | Required: Valid number.
 | appId    | String     | The ID of the application that you want assigned to the Number. If not specified, then it is assigned to the default application of the Account.
 
-<a name="getPricing"/>
+
 ## Plivo.getPricing
 The pricing API lets you retrieve a rates for a country for both inbound and outbound calls.
 
@@ -830,7 +761,7 @@ The pricing API lets you retrieve a rates for a country for both inbound and out
 | authId    | credentials| Required: Valid authId.
 | countryIso| String     | Required: The 2 digit country ISO code. eg. US, GB, QA.
 
-<a name="getRecordings"/>
+
 ## Plivo.getRecordings
 List All Recordings
 
@@ -844,7 +775,7 @@ List All Recordings
 | limit     | String     | Used to display the number of results per page. The maximum number of results that can be fetched is 20.
 | offset    | String     | Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results.
 
-<a name="getSingleRecording"/>
+
 ## Plivo.getSingleRecording
 The following API is used to retrieve a specific recording based on the recordingId.
 
@@ -854,7 +785,7 @@ The following API is used to retrieve a specific recording based on the recordin
 | authId     | credentials| Required: Valid authId.
 | recordingId| String     | Required: Valid recordingId.
 
-<a name="deleteRecording"/>
+
 ## Plivo.deleteRecording
 This API lets you delete a recording from your Plivo account using the recording ID.
 
@@ -864,7 +795,7 @@ This API lets you delete a recording from your Plivo account using the recording
 | authId     | credentials| Required: Valid authId.
 | recordingId| String     | Required: Valid recordingId.
 
-<a name="listIncomingCarriers"/>
+
 ## Plivo.listIncomingCarriers
 This API will list all incoming carrier registered with you account on Plivo.
 
@@ -876,7 +807,7 @@ This API will list all incoming carrier registered with you account on Plivo.
 | limit    | String     | Used to display the number of results per page. The maximum number of results that can be fetched is 20.
 | offset   | String     | Denotes the number of value items by which the results should be offset. Eg:- If the result contains a 1000 values and limit is set to 10 and offset is set to 705, then values 706 through 715 are displayed in the results. This parameter is also used for pagination of the results.
 
-<a name="getSingleIncomingCarrier"/>
+
 ## Plivo.getSingleIncomingCarrier
 This API returns the details of an incoming carrier.
 
@@ -886,7 +817,7 @@ This API returns the details of an incoming carrier.
 | authId   | credentials| Required: Valid authId.
 | carrierId| String     | Required: Valid carrierId.
 
-<a name="addIncomingCarrier"/>
+
 ## Plivo.addIncomingCarrier
 This API lets you add a new incoming carrier to your Plivo account.
 
@@ -897,7 +828,7 @@ This API lets you add a new incoming carrier to your Plivo account.
 | name     | String     | Required: The name of the carrier being added. It is just a representation and the name can be chosen at will.
 | ipSet    | String     | Required: Comma separated list of ip addresses from which calls belonging to the carrier will reach Plivo. This list will be used by Plivo to allow incoming call traffic into Plivo's servers. If calls come from an IP outside of this list, Plivo will not accept the call.
 
-<a name="updateIncomingCarrier"/>
+
 ## Plivo.updateIncomingCarrier
 This API lets you modify an existing incoming carrier set up on your account.
 
@@ -909,7 +840,7 @@ This API lets you modify an existing incoming carrier set up on your account.
 | name     | String     | The name of the carrier being added. It is just a representation and the name can be chosen at will.
 | ipSet    | String     | Comma separated list of ip addresses from which calls belonging to the carrier will reach Plivo. This list will be used by Plivo to allow incoming call traffic into Plivo's servers. If calls come from an IP outside of this list, Plivo will not accept the call.
 
-<a name="removeIncomingCarrier"/>
+
 ## Plivo.removeIncomingCarrier
 This API lets you remove an incoming carrier added to your account. Please note that removing a carrier will result in all numbers associated with the carrier to be deleted.
 
