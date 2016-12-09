@@ -69,10 +69,13 @@ for(let func in control) {
 
             response            = yield api.auth(authopts).request(options);
             r.callback          = 'success';
-            r.contextWrites[to] = response == '' ? 'Success!' : response;
+            r.contextWrites[to] = response == '' ? {status: 'success'} : response;
         } catch(e) {
             r.callback          = 'error';
-            r.contextWrites[to] = e.message ? e.message : e;
+            r.contextWrites[to] = {
+                status_code: 'API_ERROR',
+                status_msg: e.message ? e.message : e
+            }
         }
 
         res.status(200).send(r);
