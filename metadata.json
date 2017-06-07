@@ -1290,7 +1290,8 @@
         },
         {
           "name": "voice",
-          "type": "String",
+          "type": "Select",
+          "options": ["MAN","WOMAN"],
           "info": "The voice to be used, can be MAN, WOMAN.",
           "required": false
         },
@@ -1954,7 +1955,8 @@
         },
         {
           "name": "voice",
-          "type": "String",
+          "type": "Select",
+          "options": ["MAN","WOMAN"],
           "info": "The voice to be used. Can be MAN or WOMAN. Defaults to WOMAN.",
           "required": false
         },

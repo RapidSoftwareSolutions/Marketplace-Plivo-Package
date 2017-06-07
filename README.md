@@ -9,7 +9,14 @@ Global SMS & Voice calls for businesses of all sizes
 1. Go to [Plivo dashboard](https://manage.plivo.com/dashboard/)
 2. Copy and save your `AUTH ID` and `AUTH TOKEN`.
  
-
+## Custom datatypes:
+ |Datatype|Description|Example
+ |--------|-----------|----------
+ |Datepicker|String which includes date and time|```2016-05-28 00:00:00```
+ |Map|String which includes latitude and longitude coma separated|```50.37, 26.56```
+ |List|Simple array|```["123", "sample"]```
+ |Select|String with predefined values|```sample```
+ |Array|Array of objects|```[{"Second name":"123","Age":"12","Photo":"sdf","Draft":"sdfsdf"},{"name":"adi","Second name":"bla","Age":"4","Photo":"asfserwe","Draft":"sdfsdf"}] ```
 
 ## Plivo.getAccountDetails
 You can call this API to retrieve details like email address, cash credits, postal address, auto recharge settings, etc which is associated with your Plivo account. Returns an object representing your Plivo account.
@@ -332,7 +339,7 @@ The Speak API lets you play text asynchronously on a live call. These notificati
 | authId   | credentials| Required: Valid authId.
 | callUuid | String     | Required: Valid callUuid.
 | text     | String     | Required: The text to be played.
-| voice    | String     | The voice to be used, can be MAN, WOMAN.
+| voice    | Select     | The voice to be used, can be MAN, WOMAN.
 | language | String     | The language to be used, see Supported voices and languages below.
 | legs     | String     | The leg on which the text has to be played, can be aleg (i.e., A-leg is the first leg of the call or current call), bleg (i.e., B-leg is the second leg of the call),or both (i.e., both legs of the call).
 | loop     | String     | If set to true, the text will play indefinitely. 
@@ -512,7 +519,7 @@ This API will play text to a member in a conference.
 | conferenceName| String     | Required: Valid conferenceName.
 | memberId      | String     | Required: Valid memberId.
 | text          | String     | Required: The text that the member must hear.
-| voice         | String     | The voice to be used. Can be MAN or WOMAN. Defaults to WOMAN.
+| voice         | Select     | The voice to be used. Can be MAN or WOMAN. Defaults to WOMAN.
 | language      | String     | The language to be used, see Supported voices and languages below. Defaults to en-US.
 
 
