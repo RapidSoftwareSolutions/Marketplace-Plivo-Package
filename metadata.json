@@ -11,6 +11,10 @@
       "authId", "authToken"
     ]
   },
+  "steps": [
+    "Go to Plivo dashboard (https://manage.plivo.com/dashboard/)",
+    "Copy and save your AUTH ID and AUTH TOKEN"
+  ],
   "blocks": [
     {
       "name": "getAccountDetails",
